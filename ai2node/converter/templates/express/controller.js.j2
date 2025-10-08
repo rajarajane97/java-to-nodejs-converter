@@ -1,0 +1,42 @@
+const express = require('express');
+const router = express.Router();
+
+// Converted from: {{ java_path }}
+// Purpose: Provide an Express router scaffold corresponding to a Java Controller.
+// Why scaffold? It gives a safe, auditable starting point for mapping methods
+// and annotations to REST endpoints without guessing business logic.
+// Next steps: Translate Java request mappings (e.g., @GetMapping) to routes.
+
+// Auto-generated routes inferred from Java methods/annotations.
+// Note: Method-name heuristics are used when annotations are not found.
+{% if serviceName %}
+// Attempt to wire corresponding service: {{ serviceName }}
+let ServiceClass;
+try { ServiceClass = require('./{{ serviceName }}.js'); } catch(e) { ServiceClass = null; }
+const service = ServiceClass ? new ServiceClass({}) : null;
+{% endif %}
+{% for r in routes %}
+router.{{ r.http }}('{{ r.path }}', async (req, res) => {
+  // method: {{ r.methodName }}  params: {{ r.params | tojson }}
+  {% if serviceName %}
+  // Bind arguments from path/query/body based on Java parameter annotations
+  const args = [];
+  {% for p in r.params %}
+  {% if p.source == 'path' %}args.push(req.params['{{ p.name }}']);
+  {% elif p.source == 'query' %}args.push(req.query['{{ p.name }}']);
+  {% else %}args.push(req.body && req.body['{{ p.name }}']);
+  {% endif %}
+  {% endfor %}
+  if (service && typeof service['{{ r.methodName }}'] === 'function') {
+    const result = await service['{{ r.methodName }}'](...args);
+    return res.status(200).json(result);
+  }
+  {% endif %}
+  return res.status(200).json({ ok: true, method: '{{ r.methodName }}' });
+});
+{% endfor %}
+
+// Exporting a router keeps separation of concerns and fits common Express style.
+module.exports = router;
+
+

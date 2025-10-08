@@ -1,0 +1,48 @@
+Conversion Report
+=================
+
+Total time (ms): {{ '%.2f' % totalMs }}
+Total input tokens: {{ totalInputTokens }}
+Total output tokens: {{ totalOutputTokens }}
+
+Files Converted:
+{% for r in results %}
+- Category: {{ r.category }}
+  Source: {{ r.source }}
+  Target: {{ r.target }}
+  Bytes In: {{ r.bytes_in }}
+  Bytes Out: {{ r.bytes_out }}
+  Elapsed (ms): {{ '%.2f' % r.elapsed_ms }}
+{% endfor %}
+
+Extracted Knowledge
+-------------------
+Project overview: {% if knowledge %}{{ knowledge.projectOverview }}{% else %}N/A{% endif %}
+{% if knowledge %}
+{% for mod in knowledge.modules %}
+- Class: {{ mod.name }}
+  Dependencies: {{ (mod.dependencies or []) | join(', ') }}
+  Methods:
+  {% for m in mod.methods %}
+  - {{ m.name }} | {{ m.signature }} | Complexity: {{ m.complexity }} ({{ m.complexityScore }})
+  {% endfor %}
+{% endfor %}
+{% endif %}
+
+Code Structure
+--------------
+Source (Java):
+{% if srcTree %}
+{{ srcTree | join('\n') }}
+{% else %}
+Unavailable
+{% endif %}
+
+Output (Node.js):
+{% if outTree %}
+{{ outTree | join('\n') }}
+{% else %}
+Unavailable
+{% endif %}
+
+

@@ -1,0 +1,3576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversion Report</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2f;
+      --muted: #9fb3c8;
+      --text: #e6edf3;
+      --accent: #58a6ff;
+      --ok: #2ea043;
+      --warn: #f2cc60;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial; background: var(--bg); color: var(--text); margin: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .card { background: var(--panel); border: 1px solid #1f2a44; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+    h1, h2 { margin: 0 0 12px; font-weight: 600; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .metric { background: #0e1627; border: 1px solid #17223c; border-radius: 10px; padding: 12px; }
+    .metric .label { color: var(--muted); font-size: 12px; }
+    .metric .value { font-size: 20px; font-weight: 700; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { border-bottom: 1px solid #1f2a44; padding: 10px 8px; text-align: left; }
+    th { color: var(--muted); font-weight: 600; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+    .pill.ok { background: rgba(46,160,67,.15); color: var(--ok); }
+    .pill.warn { background: rgba(242,204,96,.15); color: var(--warn); }
+    .muted { color: var(--muted); }
+    details { background: #0e1627; border: 1px solid #17223c; border-radius: 8px; padding: 8px 12px; margin-top: 8px; }
+    summary { cursor: pointer; }
+    code { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Conversion Report</h1>
+      <div class="grid">
+        <div class="metric">
+          <div class="label">Total Time (ms)</div>
+          <div class="value">19.75</div>
+        </div>
+        <div class="metric">
+          <div class="label">Input Tokens</div>
+          <div class="value">18185</div>
+        </div>
+        <div class="metric">
+          <div class="label">Output Tokens</div>
+          <div class="value">17649</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Converted Files</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Source</th>
+            <th>Target</th>
+            <th>Bytes In</th>
+            <th>Bytes Out</th>
+            <th>Elapsed (ms)</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td><span class="pill ok">Controller</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\controller\ActorController.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\ActorControllerController.js</code></td>
+            <td>2522</td>
+            <td>3632</td>
+            <td>1.79</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Controller</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\controller\CategoryController.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\CategoryControllerController.js</code></td>
+            <td>1503</td>
+            <td>2838</td>
+            <td>2.80</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Controller</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\controller\CustomerController.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\CustomerControllerController.js</code></td>
+            <td>4622</td>
+            <td>3176</td>
+            <td>2.46</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Controller</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\controller\FilmController.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\FilmControllerController.js</code></td>
+            <td>5386</td>
+            <td>5339</td>
+            <td>2.98</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Controller</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\controller\MainController.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\MainControllerController.js</code></td>
+            <td>502</td>
+            <td>2290</td>
+            <td>0.63</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Controller</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\controller\StaffController.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\StaffControllerController.js</code></td>
+            <td>1621</td>
+            <td>1694</td>
+            <td>0.95</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Service</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\securingweb\UserDetailsServiceImpl.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\UserDetailsServiceImplService.js</code></td>
+            <td>1898</td>
+            <td>668</td>
+            <td>1.91</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Service</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\services\ActorService.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\ActorServiceService.js</code></td>
+            <td>1280</td>
+            <td>1490</td>
+            <td>1.13</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Service</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\services\CategoryService.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\CategoryServiceService.js</code></td>
+            <td>721</td>
+            <td>770</td>
+            <td>0.68</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Service</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\services\CustomerService.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\CustomerServiceService.js</code></td>
+            <td>1489</td>
+            <td>1786</td>
+            <td>1.02</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Service</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\services\FilmService.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\FilmServiceService.js</code></td>
+            <td>1459</td>
+            <td>1815</td>
+            <td>1.01</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Service</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\services\InventoryService.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\InventoryServiceService.js</code></td>
+            <td>1050</td>
+            <td>1059</td>
+            <td>0.75</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Service</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\services\RentalService.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\RentalServiceService.js</code></td>
+            <td>1188</td>
+            <td>925</td>
+            <td>0.90</td>
+          </tr>
+          
+          <tr>
+            <td><span class="pill ok">Service</span></td>
+            <td class="muted">C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Test_Prj\SakilaProject-master\src\main\java\com\sparta\engineering72\sakilaproject\services\StaffService.java</td>
+            <td><code>C:\Users\AryRan\Rajarajan\AI-Learning\Assignment\Java2NodeAI\Output\Converted\StaffServiceService.js</code></td>
+            <td>682</td>
+            <td>779</td>
+            <td>0.72</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    
+    <div class="card">
+      <h2>Extracted Knowledge</h2>
+      <p class="muted">Overview: Summarize this Java project in 1-2 sentences based on class names: SakilaProjectApplication, ActorController, CategoryController, CustomerController, FilmController, MainController, StaffController, Actor, Category, Customer, Film, FilmActor, FilmActorPK, FilmCategory, FilmCategoryPK, FilmText, Inventory, Order, Rental, Staff, ActorRepository, CategoryRepository, CustomerRepository, FilmRepository, InventoryRepository, RentalRepository, StaffRepository, FailureHandler, MvcConfig, SuccessHandler</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Dependencies</th>
+            <th>Methods</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td><strong>SakilaProjectApplication</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>1 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>main</td>
+                      <td class="muted">public void main(String args)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>ActorController</strong></td>
+            <td class="muted">Actor, ActorService, FilmService</td>
+            <td>
+              <details>
+                <summary>4 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getActors</td>
+                      <td class="muted">public String getActors(ModelMap modelMap, String firstNameFilter, String lastNameFilter)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (5)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActorFilmDetails</td>
+                      <td class="muted">public String getActorFilmDetails(ModelMap modelMap, Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>findActorById</td>
+                      <td class="muted">public Actor findActorById(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActorFullNameFromID</td>
+                      <td class="muted">public String getActorFullNameFromID(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>CategoryController</strong></td>
+            <td class="muted">Category, CategoryService, FilmService</td>
+            <td>
+              <details>
+                <summary>3 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getCategories</td>
+                      <td class="muted">public String getCategories(ModelMap modelMap)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCategoryDetails</td>
+                      <td class="muted">public String getCategoryDetails(ModelMap modelMap, Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCategoryById</td>
+                      <td class="muted">public Category getCategoryById(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>CustomerController</strong></td>
+            <td class="muted">CustomerService, FilmService, InventoryService, RentalService</td>
+            <td>
+              <details>
+                <summary>3 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>currentUser</td>
+                      <td class="muted">public String currentUser(ModelMap modelMap, HttpServletRequest request)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (3)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomers</td>
+                      <td class="muted">public String getCustomers(ModelMap modelMap, String firstNameFilter, String lastNameFilter)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (5)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>showUsersRentalHistory</td>
+                      <td class="muted">public String showUsersRentalHistory(ModelMap modelMap, int id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (3)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FilmController</strong></td>
+            <td class="muted">CustomerService, Film, FilmService, InventoryService, RentalService</td>
+            <td>
+              <details>
+                <summary>7 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getFilms</td>
+                      <td class="muted">public String getFilms(ModelMap modelMap, String filter)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (2)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmDetails</td>
+                      <td class="muted">public String getFilmDetails(ModelMap modelMap, Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>rentFilm</td>
+                      <td class="muted">public String rentFilm(ModelMap modelMap, Principal principal, int filmid)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (3)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmDetails</td>
+                      <td class="muted">public String getFilmDetails(ModelMap modelMap, String filter)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (3)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>showEditProductPage</td>
+                      <td class="muted">public ModelAndView showEditProductPage(int id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>deleteProduct</td>
+                      <td class="muted">public String deleteProduct(int id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>findFilmByID</td>
+                      <td class="muted">public Film findFilmByID(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>MainController</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>3 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>home</td>
+                      <td class="muted">public String home()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>login</td>
+                      <td class="muted">public String login()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>account</td>
+                      <td class="muted">public String account()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>StaffController</strong></td>
+            <td class="muted">CustomerService, InventoryService, StaffService</td>
+            <td>
+              <details>
+                <summary>1 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>currentUser</td>
+                      <td class="muted">public String currentUser(ModelMap modelMap, HttpServletRequest request)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Actor</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>10 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getActorId</td>
+                      <td class="muted">public int getActorId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setActorId</td>
+                      <td class="muted">public void setActorId(int actorId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFirstName</td>
+                      <td class="muted">public String getFirstName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFirstName</td>
+                      <td class="muted">public void setFirstName(String firstName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastName</td>
+                      <td class="muted">public String getLastName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastName</td>
+                      <td class="muted">public void setLastName(String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">Medium (7)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Category</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>8 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getCategoryId</td>
+                      <td class="muted">public int getCategoryId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setCategoryId</td>
+                      <td class="muted">public void setCategoryId(int categoryId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getName</td>
+                      <td class="muted">public String getName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setName</td>
+                      <td class="muted">public void setName(String name)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">Medium (6)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Customer</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>16 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getCustomerId</td>
+                      <td class="muted">public int getCustomerId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setCustomerId</td>
+                      <td class="muted">public void setCustomerId(int customerId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFirstName</td>
+                      <td class="muted">public String getFirstName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFirstName</td>
+                      <td class="muted">public void setFirstName(String firstName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastName</td>
+                      <td class="muted">public String getLastName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastName</td>
+                      <td class="muted">public void setLastName(String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getEmail</td>
+                      <td class="muted">public String getEmail()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setEmail</td>
+                      <td class="muted">public void setEmail(String email)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActive</td>
+                      <td class="muted">public byte getActive()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setActive</td>
+                      <td class="muted">public void setActive(byte active)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCreateDate</td>
+                      <td class="muted">public Timestamp getCreateDate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setCreateDate</td>
+                      <td class="muted">public void setCreateDate(Timestamp createDate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">Medium (10)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Film</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>24 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getFilmId</td>
+                      <td class="muted">public int getFilmId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFilmId</td>
+                      <td class="muted">public void setFilmId(int filmId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getTitle</td>
+                      <td class="muted">public String getTitle()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setTitle</td>
+                      <td class="muted">public void setTitle(String title)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getDescription</td>
+                      <td class="muted">public String getDescription()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setDescription</td>
+                      <td class="muted">public void setDescription(String description)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getReleaseYear</td>
+                      <td class="muted">public int getReleaseYear()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setReleaseYear</td>
+                      <td class="muted">public void setReleaseYear(int releaseYear)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getRentalDuration</td>
+                      <td class="muted">public Integer getRentalDuration()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setRentalDuration</td>
+                      <td class="muted">public void setRentalDuration(Integer rentalDuration)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getRentalRate</td>
+                      <td class="muted">public BigDecimal getRentalRate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setRentalRate</td>
+                      <td class="muted">public void setRentalRate(BigDecimal rentalRate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLength</td>
+                      <td class="muted">public Integer getLength()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLength</td>
+                      <td class="muted">public void setLength(Integer length)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getReplacementCost</td>
+                      <td class="muted">public BigDecimal getReplacementCost()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setReplacementCost</td>
+                      <td class="muted">public void setReplacementCost(BigDecimal replacementCost)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getRating</td>
+                      <td class="muted">public String getRating()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setRating</td>
+                      <td class="muted">public void setRating(String rating)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getSpecialFeatures</td>
+                      <td class="muted">public String getSpecialFeatures()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setSpecialFeatures</td>
+                      <td class="muted">public void setSpecialFeatures(String specialFeatures)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">High (14)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FilmActor</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>8 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getActorId</td>
+                      <td class="muted">public int getActorId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setActorId</td>
+                      <td class="muted">public void setActorId(int actorId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmId</td>
+                      <td class="muted">public int getFilmId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFilmId</td>
+                      <td class="muted">public void setFilmId(int filmId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">Medium (6)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FilmActorPK</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>6 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getActorId</td>
+                      <td class="muted">public Integer getActorId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setActorId</td>
+                      <td class="muted">public void setActorId(int actorId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmId</td>
+                      <td class="muted">public int getFilmId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFilmId</td>
+                      <td class="muted">public void setFilmId(int filmId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (5)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FilmCategory</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>8 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getFilmId</td>
+                      <td class="muted">public int getFilmId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFilmId</td>
+                      <td class="muted">public void setFilmId(Integer filmId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCategoryId</td>
+                      <td class="muted">public int getCategoryId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setCategoryId</td>
+                      <td class="muted">public void setCategoryId(Integer categoryId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">Medium (6)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FilmCategoryPK</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>6 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getFilmId</td>
+                      <td class="muted">public int getFilmId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFilmId</td>
+                      <td class="muted">public void setFilmId(int filmId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCategoryId</td>
+                      <td class="muted">public int getCategoryId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setCategoryId</td>
+                      <td class="muted">public void setCategoryId(int categoryId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (5)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FilmText</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>8 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getFilmId</td>
+                      <td class="muted">public int getFilmId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFilmId</td>
+                      <td class="muted">public void setFilmId(int filmId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getTitle</td>
+                      <td class="muted">public String getTitle()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setTitle</td>
+                      <td class="muted">public void setTitle(String title)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getDescription</td>
+                      <td class="muted">public String getDescription()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setDescription</td>
+                      <td class="muted">public void setDescription(String description)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">Medium (6)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Inventory</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>8 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getInventoryId</td>
+                      <td class="muted">public int getInventoryId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setInventoryId</td>
+                      <td class="muted">public void setInventoryId(int inventoryId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmId</td>
+                      <td class="muted">public int getFilmId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFilmId</td>
+                      <td class="muted">public void setFilmId(int filmId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (5)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Order</strong></td>
+            <td class="muted">Customer, Film, Rental</td>
+            <td>
+              <details>
+                <summary>6 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getCustomer</td>
+                      <td class="muted">public Customer getCustomer()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setCustomer</td>
+                      <td class="muted">public void setCustomer(Customer customer)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilm</td>
+                      <td class="muted">public Film getFilm()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFilm</td>
+                      <td class="muted">public void setFilm(Film film)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getRental</td>
+                      <td class="muted">public Rental getRental()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setRental</td>
+                      <td class="muted">public void setRental(Rental rental)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Rental</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>16 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getRentalId</td>
+                      <td class="muted">public int getRentalId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setRentalId</td>
+                      <td class="muted">public void setRentalId(int rentalId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getRentalDate</td>
+                      <td class="muted">public Timestamp getRentalDate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setRentalDate</td>
+                      <td class="muted">public void setRentalDate(Timestamp rentalDate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getInventoryId</td>
+                      <td class="muted">public int getInventoryId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setInventoryId</td>
+                      <td class="muted">public void setInventoryId(int inventoryId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomerId</td>
+                      <td class="muted">public int getCustomerId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setCustomerId</td>
+                      <td class="muted">public void setCustomerId(int customerId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getReturnDate</td>
+                      <td class="muted">public Timestamp getReturnDate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setReturnDate</td>
+                      <td class="muted">public void setReturnDate(Timestamp returnDate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getStaffId</td>
+                      <td class="muted">public int getStaffId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setStaffId</td>
+                      <td class="muted">public void setStaffId(int staffId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">Medium (10)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Staff</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>20 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getStaffId</td>
+                      <td class="muted">public int getStaffId()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setStaffId</td>
+                      <td class="muted">public void setStaffId(int staffId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFirstName</td>
+                      <td class="muted">public String getFirstName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setFirstName</td>
+                      <td class="muted">public void setFirstName(String firstName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastName</td>
+                      <td class="muted">public String getLastName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastName</td>
+                      <td class="muted">public void setLastName(String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getPicture</td>
+                      <td class="muted">public byte getPicture()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setPicture</td>
+                      <td class="muted">public void setPicture(byte picture)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getEmail</td>
+                      <td class="muted">public String getEmail()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setEmail</td>
+                      <td class="muted">public void setEmail(String email)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActive</td>
+                      <td class="muted">public byte getActive()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setActive</td>
+                      <td class="muted">public void setActive(byte active)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getUsername</td>
+                      <td class="muted">public String getUsername()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setUsername</td>
+                      <td class="muted">public void setUsername(String username)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getPassword</td>
+                      <td class="muted">public String getPassword()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setPassword</td>
+                      <td class="muted">public void setPassword(String password)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getLastUpdate</td>
+                      <td class="muted">public Timestamp getLastUpdate()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>setLastUpdate</td>
+                      <td class="muted">public void setLastUpdate(Timestamp lastUpdate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>equals</td>
+                      <td class="muted">public boolean equals(Object o)</td>
+                      <td>
+                        
+                        <span class="pill warn">High (12)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>hashCode</td>
+                      <td class="muted">public int hashCode()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>ActorRepository</strong></td>
+            <td class="muted">Actor</td>
+            <td>
+              <details>
+                <summary>4 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>findActorsByFirstNameAndLastName</td>
+                      <td class="muted">public List findActorsByFirstNameAndLastName(String firstName, String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>findActorsByFirstName</td>
+                      <td class="muted">public List findActorsByFirstName(String firstName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>findActorsByLastName</td>
+                      <td class="muted">public List findActorsByLastName(String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActorByActorId</td>
+                      <td class="muted">public Actor getActorByActorId(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>CategoryRepository</strong></td>
+            <td class="muted">Category</td>
+            <td>
+              <details>
+                <summary>1 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getCategoryByCategoryId</td>
+                      <td class="muted">public Category getCategoryByCategoryId(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>CustomerRepository</strong></td>
+            <td class="muted">Customer</td>
+            <td>
+              <details>
+                <summary>8 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getCustomerByCredentials</td>
+                      <td class="muted">public Customer getCustomerByCredentials(String username, Integer password)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomerByUsername</td>
+                      <td class="muted">public Customer getCustomerByUsername(String username)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomersByFirstName</td>
+                      <td class="muted">public List getCustomersByFirstName(String firstName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomersByLastName</td>
+                      <td class="muted">public List getCustomersByLastName(String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomersByFullName</td>
+                      <td class="muted">public List getCustomersByFullName(String firstName, String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomerByCustomerId</td>
+                      <td class="muted">public Customer getCustomerByCustomerId(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomerByEmail</td>
+                      <td class="muted">public Customer getCustomerByEmail(String email)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomerCount</td>
+                      <td class="muted">public Integer getCustomerCount()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FilmRepository</strong></td>
+            <td class="muted">Film</td>
+            <td>
+              <details>
+                <summary>6 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getAvailableFilmCount</td>
+                      <td class="muted">public Integer getAvailableFilmCount(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getAvailableFilms</td>
+                      <td class="muted">public List getAvailableFilms()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getAllFilmsByCategory</td>
+                      <td class="muted">public List getAllFilmsByCategory(Integer categoryId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getAllFilmsByActor</td>
+                      <td class="muted">public List getAllFilmsByActor(Integer actorId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>findByTitle</td>
+                      <td class="muted">public List findByTitle(String title)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmByFilmId</td>
+                      <td class="muted">public Film getFilmByFilmId(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>InventoryRepository</strong></td>
+            <td class="muted">Inventory</td>
+            <td>
+              <details>
+                <summary>3 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getInventoriesByInventoryId</td>
+                      <td class="muted">public Inventory getInventoriesByInventoryId(Integer inventoryId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>deleteInventoryByInventoryId</td>
+                      <td class="muted">public void deleteInventoryByInventoryId(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getInventoryCount</td>
+                      <td class="muted">public Integer getInventoryCount()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>RentalRepository</strong></td>
+            <td class="muted">Rental</td>
+            <td>
+              <details>
+                <summary>2 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getRentalByRentalId</td>
+                      <td class="muted">public Rental getRentalByRentalId(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getRentalByCustomerId</td>
+                      <td class="muted">public List getRentalByCustomerId(Integer customerId)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>StaffRepository</strong></td>
+            <td class="muted">Staff</td>
+            <td>
+              <details>
+                <summary>1 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getStaffByUsername</td>
+                      <td class="muted">public Staff getStaffByUsername(String username)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FailureHandler</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>1 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>handle</td>
+                      <td class="muted">public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>MvcConfig</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>1 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>addViewControllers</td>
+                      <td class="muted">public void addViewControllers(ViewControllerRegistry registry)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>SuccessHandler</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>1 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>onAuthenticationSuccess</td>
+                      <td class="muted">public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (5)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>UserDetailsServiceImpl</strong></td>
+            <td class="muted">CustomerRepository, StaffRepository</td>
+            <td>
+              <details>
+                <summary>1 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>loadUserByUsername</td>
+                      <td class="muted">public UserDetails loadUserByUsername(String anyUsername)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (4)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>WebSecurityConfig</strong></td>
+            <td class="muted">CustomerService, StaffService, SuccessHandler</td>
+            <td>
+              <details>
+                <summary>5 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>configure</td>
+                      <td class="muted">public void configure(HttpSecurity http)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>userDetailsService</td>
+                      <td class="muted">public UserDetailsService userDetailsService()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>passwordEncoder</td>
+                      <td class="muted">public PasswordEncoder passwordEncoder()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>authenticationProvider</td>
+                      <td class="muted">public DaoAuthenticationProvider authenticationProvider()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>configure</td>
+                      <td class="muted">public void configure(AuthenticationManagerBuilder auth)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>ActorService</strong></td>
+            <td class="muted">Actor, ActorRepository</td>
+            <td>
+              <details>
+                <summary>6 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getAllActors</td>
+                      <td class="muted">public List getAllActors()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActorByID</td>
+                      <td class="muted">public Actor getActorByID(int id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActorsByFullName</td>
+                      <td class="muted">public List getActorsByFullName(String firstName, String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActorsByFirstName</td>
+                      <td class="muted">public List getActorsByFirstName(String firstName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActorsByLastName</td>
+                      <td class="muted">public List getActorsByLastName(String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getActorFullNameFromID</td>
+                      <td class="muted">public String getActorFullNameFromID(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>CategoryService</strong></td>
+            <td class="muted">Category, CategoryRepository</td>
+            <td>
+              <details>
+                <summary>2 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getAllCategories</td>
+                      <td class="muted">public List getAllCategories()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getByCategoryId</td>
+                      <td class="muted">public Category getByCategoryId(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>CustomerService</strong></td>
+            <td class="muted">Customer, CustomerRepository</td>
+            <td>
+              <details>
+                <summary>8 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getAllCustomers</td>
+                      <td class="muted">public List getAllCustomers()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomersByFirstName</td>
+                      <td class="muted">public List getCustomersByFirstName(String firstName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomersByLastName</td>
+                      <td class="muted">public List getCustomersByLastName(String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomersByFullName</td>
+                      <td class="muted">public List getCustomersByFullName(String firstName, String lastName)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomerByID</td>
+                      <td class="muted">public Customer getCustomerByID(int id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomerByEmail</td>
+                      <td class="muted">public Customer getCustomerByEmail(String email)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>save</td>
+                      <td class="muted">public void save(Customer customer)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getCustomerCount</td>
+                      <td class="muted">public Integer getCustomerCount()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>FilmService</strong></td>
+            <td class="muted">Film, FilmRepository</td>
+            <td>
+              <details>
+                <summary>9 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getAllFilms</td>
+                      <td class="muted">public List getAllFilms()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmByID</td>
+                      <td class="muted">public Film getFilmByID(int id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmsByTitle</td>
+                      <td class="muted">public List getFilmsByTitle(String title)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getAvailableFilms</td>
+                      <td class="muted">public List getAvailableFilms()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getAvailableFilmCount</td>
+                      <td class="muted">public Integer getAvailableFilmCount(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmsByCategory</td>
+                      <td class="muted">public List getFilmsByCategory(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getFilmsByActor</td>
+                      <td class="muted">public List getFilmsByActor(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>save</td>
+                      <td class="muted">public void save(Film film)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>deleteFilmById</td>
+                      <td class="muted">public void deleteFilmById(int id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>InventoryService</strong></td>
+            <td class="muted">Inventory, InventoryRepository</td>
+            <td>
+              <details>
+                <summary>4 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getAllInventory</td>
+                      <td class="muted">public List getAllInventory()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getInventoriesById</td>
+                      <td class="muted">public Inventory getInventoriesById(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>deleteInventoryItemById</td>
+                      <td class="muted">public void deleteInventoryItemById(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getInventoryCount</td>
+                      <td class="muted">public Integer getInventoryCount()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>RentalService</strong></td>
+            <td class="muted">RentalRepository</td>
+            <td>
+              <details>
+                <summary>2 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getRentalsByCustomer</td>
+                      <td class="muted">public List getRentalsByCustomer(Integer id)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>addRental</td>
+                      <td class="muted">public void addRental(int inventoryId, int customerId, Timestamp returnDate)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>StaffService</strong></td>
+            <td class="muted">Staff, StaffRepository</td>
+            <td>
+              <details>
+                <summary>2 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>getAllStaff</td>
+                      <td class="muted">public List getAllStaff()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>getStaffByUsername</td>
+                      <td class="muted">public Staff getStaffByUsername(String username)</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>MockTests</strong></td>
+            <td class="muted">ActorController, ActorRepository, ActorService, CategoryController, CategoryRepository, CategoryService, CustomerRepository, CustomerService, FilmController, FilmRepository, FilmService, InventoryRepository, InventoryService, RentalRepository, RentalService, StaffRepository</td>
+            <td>
+              <details>
+                <summary>28 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>init</td>
+                      <td class="muted">public void init()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testActorById</td>
+                      <td class="muted">public void testActorById()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testActorByFirstName</td>
+                      <td class="muted">public void testActorByFirstName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testActorByLastName</td>
+                      <td class="muted">public void testActorByLastName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testActorByMore</td>
+                      <td class="muted">public void testActorByMore()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testActorByFullName</td>
+                      <td class="muted">public void testActorByFullName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilmByID</td>
+                      <td class="muted">public void testFilmByID()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilmByDescritption</td>
+                      <td class="muted">public void testFilmByDescritption()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilmByRating</td>
+                      <td class="muted">public void testFilmByRating()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilmByLength</td>
+                      <td class="muted">public void testFilmByLength()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilmByName</td>
+                      <td class="muted">public void testFilmByName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilmByDescription</td>
+                      <td class="muted">public void testFilmByDescription()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilms</td>
+                      <td class="muted">public void testFilms()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCategoryById</td>
+                      <td class="muted">public void testCategoryById()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCategoryByName</td>
+                      <td class="muted">public void testCategoryByName()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCustomerById</td>
+                      <td class="muted">public void testCustomerById()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCustomer</td>
+                      <td class="muted">public void testCustomer()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testStaff</td>
+                      <td class="muted">public void testStaff()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilmController</td>
+                      <td class="muted">public void testFilmController()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testFilmController2</td>
+                      <td class="muted">public void testFilmController2()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCategory</td>
+                      <td class="muted">public void testCategory()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCategory2</td>
+                      <td class="muted">public void testCategory2()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testActorController1</td>
+                      <td class="muted">public void testActorController1()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCustomerController</td>
+                      <td class="muted">public void testCustomerController()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCustomerController2</td>
+                      <td class="muted">public void testCustomerController2()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testInventory</td>
+                      <td class="muted">public void testInventory()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testRental</td>
+                      <td class="muted">public void testRental()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>testCategoryByTimeStamp</td>
+                      <td class="muted">public void testCategoryByTimeStamp()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>SakilaProjectApplicationTests</strong></td>
+            <td class="muted"></td>
+            <td>
+              <details>
+                <summary>3 methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>MainController1</td>
+                      <td class="muted">public void MainController1()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>MainController2</td>
+                      <td class="muted">public void MainController2()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>MainController3</td>
+                      <td class="muted">public void MainController3()</td>
+                      <td>
+                        
+                        <span class="pill ok">Low (1)</span>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+
+    <div class="card">
+      <h2>Code Structure</h2>
+      <div class="grid">
+        <div>
+          <h3>Source (Java)</h3>
+          <pre class="muted" style="white-space: pre-wrap;">sakilaproject/
+  controller/
+    ActorController.java
+    CategoryController.java
+    CustomerController.java
+    FilmController.java
+    MainController.java
+    StaffController.java
+  entities/
+    Actor.java
+    Category.java
+    Customer.java
+    Film.java
+    FilmActor.java
+    FilmActorPK.java
+    FilmCategory.java
+    FilmCategoryPK.java
+    FilmText.java
+    Inventory.java
+    Order.java
+    Rental.java
+    Staff.java
+  respositories/
+    ActorRepository.java
+    CategoryRepository.java
+    CustomerRepository.java
+    FilmRepository.java
+    InventoryRepository.java
+    RentalRepository.java
+    StaffRepository.java
+  SakilaProjectApplication.java
+  securingweb/
+    FailureHandler.java
+    MvcConfig.java
+    SuccessHandler.java
+    UserDetailsServiceImpl.java
+    WebSecurityConfig.java
+  services/
+    ActorService.java
+    CategoryService.java
+    CustomerService.java
+    FilmService.java
+    InventoryService.java
+    RentalService.java
+    StaffService.java</pre>
+        </div>
+        <div>
+          <h3>Output (Node.js)</h3>
+          <pre class="muted" style="white-space: pre-wrap;">.gitkeep
+ActorControllerController.js
+ActorServiceService.js
+app.js
+CategoryControllerController.js
+CategoryServiceService.js
+CustomerControllerController.js
+CustomerServiceService.js
+FilmControllerController.js
+FilmServiceService.js
+InventoryServiceService.js
+MainControllerController.js
+RentalServiceService.js
+StaffControllerController.js
+StaffServiceService.js
+UserDetailsServiceImplService.js</pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+

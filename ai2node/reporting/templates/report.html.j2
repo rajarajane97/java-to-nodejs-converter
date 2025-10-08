@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversion Report</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2f;
+      --muted: #9fb3c8;
+      --text: #e6edf3;
+      --accent: #58a6ff;
+      --ok: #2ea043;
+      --warn: #f2cc60;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial; background: var(--bg); color: var(--text); margin: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .card { background: var(--panel); border: 1px solid #1f2a44; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+    h1, h2 { margin: 0 0 12px; font-weight: 600; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .metric { background: #0e1627; border: 1px solid #17223c; border-radius: 10px; padding: 12px; }
+    .metric .label { color: var(--muted); font-size: 12px; }
+    .metric .value { font-size: 20px; font-weight: 700; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { border-bottom: 1px solid #1f2a44; padding: 10px 8px; text-align: left; }
+    th { color: var(--muted); font-weight: 600; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+    .pill.ok { background: rgba(46,160,67,.15); color: var(--ok); }
+    .pill.warn { background: rgba(242,204,96,.15); color: var(--warn); }
+    .muted { color: var(--muted); }
+    details { background: #0e1627; border: 1px solid #17223c; border-radius: 8px; padding: 8px 12px; margin-top: 8px; }
+    summary { cursor: pointer; }
+    code { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Conversion Report</h1>
+      <div class="grid">
+        <div class="metric">
+          <div class="label">Total Time (ms)</div>
+          <div class="value">{{ '%.2f' % totalMs }}</div>
+        </div>
+        <div class="metric">
+          <div class="label">Input Tokens</div>
+          <div class="value">{{ totalInputTokens }}</div>
+        </div>
+        <div class="metric">
+          <div class="label">Output Tokens</div>
+          <div class="value">{{ totalOutputTokens }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Converted Files</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Source</th>
+            <th>Target</th>
+            <th>Bytes In</th>
+            <th>Bytes Out</th>
+            <th>Elapsed (ms)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in results %}
+          <tr>
+            <td><span class="pill ok">{{ r.category }}</span></td>
+            <td class="muted">{{ r.source }}</td>
+            <td><code>{{ r.target }}</code></td>
+            <td>{{ r.bytes_in }}</td>
+            <td>{{ r.bytes_out }}</td>
+            <td>{{ '%.2f' % r.elapsed_ms }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% if knowledge %}
+    <div class="card">
+      <h2>Extracted Knowledge</h2>
+      <p class="muted">Overview: {{ knowledge.projectOverview }}</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Dependencies</th>
+            <th>Methods</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for mod in knowledge.modules %}
+          <tr>
+            <td><strong>{{ mod.name }}</strong></td>
+            <td class="muted">{{ (mod.dependencies or []) | join(', ') }}</td>
+            <td>
+              <details>
+                <summary>{{ (mod.methods | length) }} methods</summary>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Signature</th>
+                      <th>Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for m in mod.methods %}
+                    <tr>
+                      <td>{{ m.name }}</td>
+                      <td class="muted">{{ m.signature }}</td>
+                      <td>
+                        {% set cls = 'ok' if m.complexity in ['Low'] else 'warn' %}
+                        <span class="pill {{ cls }}">{{ m.complexity }} ({{ m.complexityScore }})</span>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </details>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+
+    <div class="card">
+      <h2>Code Structure</h2>
+      <div class="grid">
+        <div>
+          <h3>Source (Java)</h3>
+          <pre class="muted" style="white-space: pre-wrap;">{% if srcTree %}{{ srcTree | join('\n') }}{% else %}Unavailable{% endif %}</pre>
+        </div>
+        <div>
+          <h3>Output (Node.js)</h3>
+          <pre class="muted" style="white-space: pre-wrap;">{% if outTree %}{{ outTree | join('\n') }}{% else %}Unavailable{% endif %}</pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+
+

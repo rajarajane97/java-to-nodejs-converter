@@ -1,0 +1,2225 @@
+{
+  "projectOverview": "Summarize this Java project in 1-2 sentences based on class names: SakilaProjectApplication, ActorController, CategoryController, CustomerController, FilmController, MainController, StaffController, Actor, Category, Customer, Film, FilmActor, FilmActorPK, FilmCategory, FilmCategoryPK, FilmText, Inventory, Order, Rental, Staff, ActorRepository, CategoryRepository, CustomerRepository, FilmRepository, InventoryRepository, RentalRepository, StaffRepository, FailureHandler, MvcConfig, SuccessHandler",
+  "modules": [
+    {
+      "name": "SakilaProjectApplication",
+      "description": "You are summarizing a Java class for documentation.\nClass: SakilaProjectApplication\nDependencies: None\nMethod signatures:\npublic void main(String args)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "main",
+          "signature": "public void main(String args)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "ActorController",
+      "description": "You are summarizing a Java class for documentation.\nClass: ActorController\nDependencies: Actor, ActorService, FilmService\nMethod signatures:\npublic String getActors(ModelMap modelMap, String firstNameFilter, String lastNameFilter)\npublic String getActorFilmDetails(ModelMap modelMap, Integer id)\npublic Actor findActorById(Integer id)\npublic String getActorFullNameFromID(Integer id)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Actor",
+        "ActorService",
+        "FilmService"
+      ],
+      "methods": [
+        {
+          "name": "getActors",
+          "signature": "public String getActors(ModelMap modelMap, String firstNameFilter, String lastNameFilter)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "getActorFilmDetails",
+          "signature": "public String getActorFilmDetails(ModelMap modelMap, Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findActorById",
+          "signature": "public Actor findActorById(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorFullNameFromID",
+          "signature": "public String getActorFullNameFromID(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CategoryController",
+      "description": "You are summarizing a Java class for documentation.\nClass: CategoryController\nDependencies: Category, CategoryService, FilmService\nMethod signatures:\npublic String getCategories(ModelMap modelMap)\npublic String getCategoryDetails(ModelMap modelMap, Integer id)\npublic Category getCategoryById(Integer id)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Category",
+        "CategoryService",
+        "FilmService"
+      ],
+      "methods": [
+        {
+          "name": "getCategories",
+          "signature": "public String getCategories(ModelMap modelMap)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCategoryDetails",
+          "signature": "public String getCategoryDetails(ModelMap modelMap, Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCategoryById",
+          "signature": "public Category getCategoryById(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CustomerController",
+      "description": "You are summarizing a Java class for documentation.\nClass: CustomerController\nDependencies: CustomerService, FilmService, InventoryService, RentalService\nMethod signatures:\npublic String currentUser(ModelMap modelMap, HttpServletRequest request)\npublic String getCustomers(ModelMap modelMap, String firstNameFilter, String lastNameFilter)\npublic String showUsersRentalHistory(ModelMap modelMap, int id)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "CustomerService",
+        "FilmService",
+        "InventoryService",
+        "RentalService"
+      ],
+      "methods": [
+        {
+          "name": "currentUser",
+          "signature": "public String currentUser(ModelMap modelMap, HttpServletRequest request)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 3
+        },
+        {
+          "name": "getCustomers",
+          "signature": "public String getCustomers(ModelMap modelMap, String firstNameFilter, String lastNameFilter)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "showUsersRentalHistory",
+          "signature": "public String showUsersRentalHistory(ModelMap modelMap, int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 3
+        }
+      ]
+    },
+    {
+      "name": "FilmController",
+      "description": "You are summarizing a Java class for documentation.\nClass: FilmController\nDependencies: CustomerService, Film, FilmService, InventoryService, RentalService\nMethod signatures:\npublic String getFilms(ModelMap modelMap, String filter)\npublic String getFilmDetails(ModelMap modelMap, Integer id)\npublic String rentFilm(ModelMap modelMap, Principal principal, int filmid)\npublic String getFilmDetails(ModelMap modelMap, String filter)\npublic ModelAndView showEditProductPage(int id)\npublic String deletePr",
+      "dependencies": [
+        "CustomerService",
+        "Film",
+        "FilmService",
+        "InventoryService",
+        "RentalService"
+      ],
+      "methods": [
+        {
+          "name": "getFilms",
+          "signature": "public String getFilms(ModelMap modelMap, String filter)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 2
+        },
+        {
+          "name": "getFilmDetails",
+          "signature": "public String getFilmDetails(ModelMap modelMap, Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "rentFilm",
+          "signature": "public String rentFilm(ModelMap modelMap, Principal principal, int filmid)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 3
+        },
+        {
+          "name": "getFilmDetails",
+          "signature": "public String getFilmDetails(ModelMap modelMap, String filter)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 3
+        },
+        {
+          "name": "showEditProductPage",
+          "signature": "public ModelAndView showEditProductPage(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "deleteProduct",
+          "signature": "public String deleteProduct(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findFilmByID",
+          "signature": "public Film findFilmByID(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "MainController",
+      "description": "You are summarizing a Java class for documentation.\nClass: MainController\nDependencies: None\nMethod signatures:\npublic String home()\npublic String login()\npublic String account()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "home",
+          "signature": "public String home()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "login",
+          "signature": "public String login()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "account",
+          "signature": "public String account()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "StaffController",
+      "description": "You are summarizing a Java class for documentation.\nClass: StaffController\nDependencies: CustomerService, InventoryService, StaffService\nMethod signatures:\npublic String currentUser(ModelMap modelMap, HttpServletRequest request)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "CustomerService",
+        "InventoryService",
+        "StaffService"
+      ],
+      "methods": [
+        {
+          "name": "currentUser",
+          "signature": "public String currentUser(ModelMap modelMap, HttpServletRequest request)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Actor",
+      "description": "You are summarizing a Java class for documentation.\nClass: Actor\nDependencies: None\nMethod signatures:\npublic int getActorId()\npublic void setActorId(int actorId)\npublic String getFirstName()\npublic void setFirstName(String firstName)\npublic String getLastName()\npublic void setLastName(String lastName)\npublic Timestamp getLastUpdate()\npublic void setLastUpdate(Timestamp lastUpdate)\npublic boolean equals(Object o)\npublic int hashCode()\nWrite a concise 1-2 sentence description of the class purpose",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public int getActorId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 7
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "description": "You are summarizing a Java class for documentation.\nClass: Category\nDependencies: None\nMethod signatures:\npublic int getCategoryId()\npublic void setCategoryId(int categoryId)\npublic String getName()\npublic void setName(String name)\npublic Timestamp getLastUpdate()\npublic void setLastUpdate(Timestamp lastUpdate)\npublic boolean equals(Object o)\npublic int hashCode()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(int categoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getName",
+          "signature": "public String getName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setName",
+          "signature": "public void setName(String name)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 6
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Customer",
+      "description": "You are summarizing a Java class for documentation.\nClass: Customer\nDependencies: None\nMethod signatures:\npublic int getCustomerId()\npublic void setCustomerId(int customerId)\npublic String getFirstName()\npublic void setFirstName(String firstName)\npublic String getLastName()\npublic void setLastName(String lastName)\npublic String getEmail()\npublic void setEmail(String email)\npublic byte getActive()\npublic void setActive(byte active)\npublic Timestamp getCreateDate()\npublic void setCreateDate(Timest",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getCustomerId",
+          "signature": "public int getCustomerId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCustomerId",
+          "signature": "public void setCustomerId(int customerId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getEmail",
+          "signature": "public String getEmail()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setEmail",
+          "signature": "public void setEmail(String email)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActive",
+          "signature": "public byte getActive()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActive",
+          "signature": "public void setActive(byte active)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCreateDate",
+          "signature": "public Timestamp getCreateDate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCreateDate",
+          "signature": "public void setCreateDate(Timestamp createDate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 10
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Film",
+      "description": "You are summarizing a Java class for documentation.\nClass: Film\nDependencies: None\nMethod signatures:\npublic int getFilmId()\npublic void setFilmId(int filmId)\npublic String getTitle()\npublic void setTitle(String title)\npublic String getDescription()\npublic void setDescription(String description)\npublic int getReleaseYear()\npublic void setReleaseYear(int releaseYear)\npublic Integer getRentalDuration()\npublic void setRentalDuration(Integer rentalDuration)\npublic BigDecimal getRentalRate()\npublic v",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getTitle",
+          "signature": "public String getTitle()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setTitle",
+          "signature": "public void setTitle(String title)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getDescription",
+          "signature": "public String getDescription()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setDescription",
+          "signature": "public void setDescription(String description)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getReleaseYear",
+          "signature": "public int getReleaseYear()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setReleaseYear",
+          "signature": "public void setReleaseYear(int releaseYear)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRentalDuration",
+          "signature": "public Integer getRentalDuration()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRentalDuration",
+          "signature": "public void setRentalDuration(Integer rentalDuration)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRentalRate",
+          "signature": "public BigDecimal getRentalRate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRentalRate",
+          "signature": "public void setRentalRate(BigDecimal rentalRate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLength",
+          "signature": "public Integer getLength()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLength",
+          "signature": "public void setLength(Integer length)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getReplacementCost",
+          "signature": "public BigDecimal getReplacementCost()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setReplacementCost",
+          "signature": "public void setReplacementCost(BigDecimal replacementCost)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRating",
+          "signature": "public String getRating()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRating",
+          "signature": "public void setRating(String rating)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getSpecialFeatures",
+          "signature": "public String getSpecialFeatures()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setSpecialFeatures",
+          "signature": "public void setSpecialFeatures(String specialFeatures)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "High",
+          "complexityScore": 14
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmActor",
+      "description": "You are summarizing a Java class for documentation.\nClass: FilmActor\nDependencies: None\nMethod signatures:\npublic int getActorId()\npublic void setActorId(int actorId)\npublic int getFilmId()\npublic void setFilmId(int filmId)\npublic Timestamp getLastUpdate()\npublic void setLastUpdate(Timestamp lastUpdate)\npublic boolean equals(Object o)\npublic int hashCode()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public int getActorId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 6
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmActorPK",
+      "description": "You are summarizing a Java class for documentation.\nClass: FilmActorPK\nDependencies: None\nMethod signatures:\npublic Integer getActorId()\npublic void setActorId(int actorId)\npublic int getFilmId()\npublic void setFilmId(int filmId)\npublic boolean equals(Object o)\npublic int hashCode()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public Integer getActorId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmCategory",
+      "description": "You are summarizing a Java class for documentation.\nClass: FilmCategory\nDependencies: None\nMethod signatures:\npublic int getFilmId()\npublic void setFilmId(Integer filmId)\npublic int getCategoryId()\npublic void setCategoryId(Integer categoryId)\npublic Timestamp getLastUpdate()\npublic void setLastUpdate(Timestamp lastUpdate)\npublic boolean equals(Object o)\npublic int hashCode()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(Integer filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(Integer categoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 6
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmCategoryPK",
+      "description": "You are summarizing a Java class for documentation.\nClass: FilmCategoryPK\nDependencies: None\nMethod signatures:\npublic int getFilmId()\npublic void setFilmId(int filmId)\npublic int getCategoryId()\npublic void setCategoryId(int categoryId)\npublic boolean equals(Object o)\npublic int hashCode()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(int categoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmText",
+      "description": "You are summarizing a Java class for documentation.\nClass: FilmText\nDependencies: None\nMethod signatures:\npublic int getFilmId()\npublic void setFilmId(int filmId)\npublic String getTitle()\npublic void setTitle(String title)\npublic String getDescription()\npublic void setDescription(String description)\npublic boolean equals(Object o)\npublic int hashCode()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getTitle",
+          "signature": "public String getTitle()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setTitle",
+          "signature": "public void setTitle(String title)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getDescription",
+          "signature": "public String getDescription()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setDescription",
+          "signature": "public void setDescription(String description)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 6
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Inventory",
+      "description": "You are summarizing a Java class for documentation.\nClass: Inventory\nDependencies: None\nMethod signatures:\npublic int getInventoryId()\npublic void setInventoryId(int inventoryId)\npublic int getFilmId()\npublic void setFilmId(int filmId)\npublic Timestamp getLastUpdate()\npublic void setLastUpdate(Timestamp lastUpdate)\npublic boolean equals(Object o)\npublic int hashCode()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getInventoryId",
+          "signature": "public int getInventoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setInventoryId",
+          "signature": "public void setInventoryId(int inventoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "description": "You are summarizing a Java class for documentation.\nClass: Order\nDependencies: Customer, Film, Rental\nMethod signatures:\npublic Customer getCustomer()\npublic void setCustomer(Customer customer)\npublic Film getFilm()\npublic void setFilm(Film film)\npublic Rental getRental()\npublic void setRental(Rental rental)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Customer",
+        "Film",
+        "Rental"
+      ],
+      "methods": [
+        {
+          "name": "getCustomer",
+          "signature": "public Customer getCustomer()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCustomer",
+          "signature": "public void setCustomer(Customer customer)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilm",
+          "signature": "public Film getFilm()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilm",
+          "signature": "public void setFilm(Film film)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRental",
+          "signature": "public Rental getRental()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRental",
+          "signature": "public void setRental(Rental rental)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Rental",
+      "description": "You are summarizing a Java class for documentation.\nClass: Rental\nDependencies: None\nMethod signatures:\npublic int getRentalId()\npublic void setRentalId(int rentalId)\npublic Timestamp getRentalDate()\npublic void setRentalDate(Timestamp rentalDate)\npublic int getInventoryId()\npublic void setInventoryId(int inventoryId)\npublic int getCustomerId()\npublic void setCustomerId(int customerId)\npublic Timestamp getReturnDate()\npublic void setReturnDate(Timestamp returnDate)\npublic int getStaffId()\npublic",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getRentalId",
+          "signature": "public int getRentalId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRentalId",
+          "signature": "public void setRentalId(int rentalId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRentalDate",
+          "signature": "public Timestamp getRentalDate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRentalDate",
+          "signature": "public void setRentalDate(Timestamp rentalDate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getInventoryId",
+          "signature": "public int getInventoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setInventoryId",
+          "signature": "public void setInventoryId(int inventoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerId",
+          "signature": "public int getCustomerId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCustomerId",
+          "signature": "public void setCustomerId(int customerId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getReturnDate",
+          "signature": "public Timestamp getReturnDate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setReturnDate",
+          "signature": "public void setReturnDate(Timestamp returnDate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getStaffId",
+          "signature": "public int getStaffId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setStaffId",
+          "signature": "public void setStaffId(int staffId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 10
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Staff",
+      "description": "You are summarizing a Java class for documentation.\nClass: Staff\nDependencies: None\nMethod signatures:\npublic int getStaffId()\npublic void setStaffId(int staffId)\npublic String getFirstName()\npublic void setFirstName(String firstName)\npublic String getLastName()\npublic void setLastName(String lastName)\npublic byte getPicture()\npublic void setPicture(byte picture)\npublic String getEmail()\npublic void setEmail(String email)\npublic byte getActive()\npublic void setActive(byte active)\npublic String g",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getStaffId",
+          "signature": "public int getStaffId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setStaffId",
+          "signature": "public void setStaffId(int staffId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getPicture",
+          "signature": "public byte getPicture()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setPicture",
+          "signature": "public void setPicture(byte picture)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getEmail",
+          "signature": "public String getEmail()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setEmail",
+          "signature": "public void setEmail(String email)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActive",
+          "signature": "public byte getActive()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActive",
+          "signature": "public void setActive(byte active)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getUsername",
+          "signature": "public String getUsername()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setUsername",
+          "signature": "public void setUsername(String username)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getPassword",
+          "signature": "public String getPassword()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setPassword",
+          "signature": "public void setPassword(String password)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "High",
+          "complexityScore": 12
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "ActorRepository",
+      "description": "You are summarizing a Java class for documentation.\nClass: ActorRepository\nDependencies: Actor\nMethod signatures:\npublic List findActorsByFirstNameAndLastName(String firstName, String lastName)\npublic List findActorsByFirstName(String firstName)\npublic List findActorsByLastName(String lastName)\npublic Actor getActorByActorId(Integer id)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Actor"
+      ],
+      "methods": [
+        {
+          "name": "findActorsByFirstNameAndLastName",
+          "signature": "public List findActorsByFirstNameAndLastName(String firstName, String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findActorsByFirstName",
+          "signature": "public List findActorsByFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findActorsByLastName",
+          "signature": "public List findActorsByLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorByActorId",
+          "signature": "public Actor getActorByActorId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CategoryRepository",
+      "description": "You are summarizing a Java class for documentation.\nClass: CategoryRepository\nDependencies: Category\nMethod signatures:\npublic Category getCategoryByCategoryId(Integer id)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Category"
+      ],
+      "methods": [
+        {
+          "name": "getCategoryByCategoryId",
+          "signature": "public Category getCategoryByCategoryId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CustomerRepository",
+      "description": "You are summarizing a Java class for documentation.\nClass: CustomerRepository\nDependencies: Customer\nMethod signatures:\npublic Customer getCustomerByCredentials(String username, Integer password)\npublic Customer getCustomerByUsername(String username)\npublic List getCustomersByFirstName(String firstName)\npublic List getCustomersByLastName(String lastName)\npublic List getCustomersByFullName(String firstName, String lastName)\npublic Customer getCustomerByCustomerId(Integer id)\npublic Customer getCu",
+      "dependencies": [
+        "Customer"
+      ],
+      "methods": [
+        {
+          "name": "getCustomerByCredentials",
+          "signature": "public Customer getCustomerByCredentials(String username, Integer password)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByUsername",
+          "signature": "public Customer getCustomerByUsername(String username)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByFirstName",
+          "signature": "public List getCustomersByFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByLastName",
+          "signature": "public List getCustomersByLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByFullName",
+          "signature": "public List getCustomersByFullName(String firstName, String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByCustomerId",
+          "signature": "public Customer getCustomerByCustomerId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByEmail",
+          "signature": "public Customer getCustomerByEmail(String email)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerCount",
+          "signature": "public Integer getCustomerCount()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmRepository",
+      "description": "You are summarizing a Java class for documentation.\nClass: FilmRepository\nDependencies: Film\nMethod signatures:\npublic Integer getAvailableFilmCount(Integer id)\npublic List getAvailableFilms()\npublic List getAllFilmsByCategory(Integer categoryId)\npublic List getAllFilmsByActor(Integer actorId)\npublic List findByTitle(String title)\npublic Film getFilmByFilmId(Integer id)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Film"
+      ],
+      "methods": [
+        {
+          "name": "getAvailableFilmCount",
+          "signature": "public Integer getAvailableFilmCount(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAvailableFilms",
+          "signature": "public List getAvailableFilms()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAllFilmsByCategory",
+          "signature": "public List getAllFilmsByCategory(Integer categoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAllFilmsByActor",
+          "signature": "public List getAllFilmsByActor(Integer actorId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findByTitle",
+          "signature": "public List findByTitle(String title)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmByFilmId",
+          "signature": "public Film getFilmByFilmId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "InventoryRepository",
+      "description": "You are summarizing a Java class for documentation.\nClass: InventoryRepository\nDependencies: Inventory\nMethod signatures:\npublic Inventory getInventoriesByInventoryId(Integer inventoryId)\npublic void deleteInventoryByInventoryId(Integer id)\npublic Integer getInventoryCount()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Inventory"
+      ],
+      "methods": [
+        {
+          "name": "getInventoriesByInventoryId",
+          "signature": "public Inventory getInventoriesByInventoryId(Integer inventoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "deleteInventoryByInventoryId",
+          "signature": "public void deleteInventoryByInventoryId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getInventoryCount",
+          "signature": "public Integer getInventoryCount()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "RentalRepository",
+      "description": "You are summarizing a Java class for documentation.\nClass: RentalRepository\nDependencies: Rental\nMethod signatures:\npublic Rental getRentalByRentalId(Integer id)\npublic List getRentalByCustomerId(Integer customerId)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Rental"
+      ],
+      "methods": [
+        {
+          "name": "getRentalByRentalId",
+          "signature": "public Rental getRentalByRentalId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRentalByCustomerId",
+          "signature": "public List getRentalByCustomerId(Integer customerId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "StaffRepository",
+      "description": "You are summarizing a Java class for documentation.\nClass: StaffRepository\nDependencies: Staff\nMethod signatures:\npublic Staff getStaffByUsername(String username)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Staff"
+      ],
+      "methods": [
+        {
+          "name": "getStaffByUsername",
+          "signature": "public Staff getStaffByUsername(String username)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FailureHandler",
+      "description": "You are summarizing a Java class for documentation.\nClass: FailureHandler\nDependencies: None\nMethod signatures:\npublic void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "handle",
+          "signature": "public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "MvcConfig",
+      "description": "You are summarizing a Java class for documentation.\nClass: MvcConfig\nDependencies: None\nMethod signatures:\npublic void addViewControllers(ViewControllerRegistry registry)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "addViewControllers",
+          "signature": "public void addViewControllers(ViewControllerRegistry registry)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "SuccessHandler",
+      "description": "You are summarizing a Java class for documentation.\nClass: SuccessHandler\nDependencies: None\nMethod signatures:\npublic void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "onAuthenticationSuccess",
+          "signature": "public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        }
+      ]
+    },
+    {
+      "name": "UserDetailsServiceImpl",
+      "description": "You are summarizing a Java class for documentation.\nClass: UserDetailsServiceImpl\nDependencies: CustomerRepository, StaffRepository\nMethod signatures:\npublic UserDetails loadUserByUsername(String anyUsername)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "CustomerRepository",
+        "StaffRepository"
+      ],
+      "methods": [
+        {
+          "name": "loadUserByUsername",
+          "signature": "public UserDetails loadUserByUsername(String anyUsername)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 4
+        }
+      ]
+    },
+    {
+      "name": "WebSecurityConfig",
+      "description": "You are summarizing a Java class for documentation.\nClass: WebSecurityConfig\nDependencies: CustomerService, StaffService, SuccessHandler\nMethod signatures:\npublic void configure(HttpSecurity http)\npublic UserDetailsService userDetailsService()\npublic PasswordEncoder passwordEncoder()\npublic DaoAuthenticationProvider authenticationProvider()\npublic void configure(AuthenticationManagerBuilder auth)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "CustomerService",
+        "StaffService",
+        "SuccessHandler"
+      ],
+      "methods": [
+        {
+          "name": "configure",
+          "signature": "public void configure(HttpSecurity http)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "userDetailsService",
+          "signature": "public UserDetailsService userDetailsService()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "passwordEncoder",
+          "signature": "public PasswordEncoder passwordEncoder()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "authenticationProvider",
+          "signature": "public DaoAuthenticationProvider authenticationProvider()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "configure",
+          "signature": "public void configure(AuthenticationManagerBuilder auth)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "ActorService",
+      "description": "You are summarizing a Java class for documentation.\nClass: ActorService\nDependencies: Actor, ActorRepository\nMethod signatures:\npublic List getAllActors()\npublic Actor getActorByID(int id)\npublic List getActorsByFullName(String firstName, String lastName)\npublic List getActorsByFirstName(String firstName)\npublic List getActorsByLastName(String lastName)\npublic String getActorFullNameFromID(Integer id)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Actor",
+        "ActorRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllActors",
+          "signature": "public List getAllActors()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorByID",
+          "signature": "public Actor getActorByID(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorsByFullName",
+          "signature": "public List getActorsByFullName(String firstName, String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorsByFirstName",
+          "signature": "public List getActorsByFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorsByLastName",
+          "signature": "public List getActorsByLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorFullNameFromID",
+          "signature": "public String getActorFullNameFromID(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CategoryService",
+      "description": "You are summarizing a Java class for documentation.\nClass: CategoryService\nDependencies: Category, CategoryRepository\nMethod signatures:\npublic List getAllCategories()\npublic Category getByCategoryId(Integer id)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Category",
+        "CategoryRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllCategories",
+          "signature": "public List getAllCategories()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getByCategoryId",
+          "signature": "public Category getByCategoryId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CustomerService",
+      "description": "You are summarizing a Java class for documentation.\nClass: CustomerService\nDependencies: Customer, CustomerRepository\nMethod signatures:\npublic List getAllCustomers()\npublic List getCustomersByFirstName(String firstName)\npublic List getCustomersByLastName(String lastName)\npublic List getCustomersByFullName(String firstName, String lastName)\npublic Customer getCustomerByID(int id)\npublic Customer getCustomerByEmail(String email)\npublic void save(Customer customer)\npublic Integer getCustomerCount(",
+      "dependencies": [
+        "Customer",
+        "CustomerRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllCustomers",
+          "signature": "public List getAllCustomers()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByFirstName",
+          "signature": "public List getCustomersByFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByLastName",
+          "signature": "public List getCustomersByLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByFullName",
+          "signature": "public List getCustomersByFullName(String firstName, String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByID",
+          "signature": "public Customer getCustomerByID(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByEmail",
+          "signature": "public Customer getCustomerByEmail(String email)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "save",
+          "signature": "public void save(Customer customer)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerCount",
+          "signature": "public Integer getCustomerCount()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmService",
+      "description": "You are summarizing a Java class for documentation.\nClass: FilmService\nDependencies: Film, FilmRepository\nMethod signatures:\npublic List getAllFilms()\npublic Film getFilmByID(int id)\npublic List getFilmsByTitle(String title)\npublic List getAvailableFilms()\npublic Integer getAvailableFilmCount(Integer id)\npublic List getFilmsByCategory(Integer id)\npublic List getFilmsByActor(Integer id)\npublic void save(Film film)\npublic void deleteFilmById(int id)\nWrite a concise 1-2 sentence description of the ",
+      "dependencies": [
+        "Film",
+        "FilmRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllFilms",
+          "signature": "public List getAllFilms()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmByID",
+          "signature": "public Film getFilmByID(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmsByTitle",
+          "signature": "public List getFilmsByTitle(String title)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAvailableFilms",
+          "signature": "public List getAvailableFilms()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAvailableFilmCount",
+          "signature": "public Integer getAvailableFilmCount(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmsByCategory",
+          "signature": "public List getFilmsByCategory(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmsByActor",
+          "signature": "public List getFilmsByActor(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "save",
+          "signature": "public void save(Film film)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "deleteFilmById",
+          "signature": "public void deleteFilmById(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "InventoryService",
+      "description": "You are summarizing a Java class for documentation.\nClass: InventoryService\nDependencies: Inventory, InventoryRepository\nMethod signatures:\npublic List getAllInventory()\npublic Inventory getInventoriesById(Integer id)\npublic void deleteInventoryItemById(Integer id)\npublic Integer getInventoryCount()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Inventory",
+        "InventoryRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllInventory",
+          "signature": "public List getAllInventory()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getInventoriesById",
+          "signature": "public Inventory getInventoriesById(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "deleteInventoryItemById",
+          "signature": "public void deleteInventoryItemById(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getInventoryCount",
+          "signature": "public Integer getInventoryCount()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "RentalService",
+      "description": "You are summarizing a Java class for documentation.\nClass: RentalService\nDependencies: RentalRepository\nMethod signatures:\npublic List getRentalsByCustomer(Integer id)\npublic void addRental(int inventoryId, int customerId, Timestamp returnDate)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "RentalRepository"
+      ],
+      "methods": [
+        {
+          "name": "getRentalsByCustomer",
+          "signature": "public List getRentalsByCustomer(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "addRental",
+          "signature": "public void addRental(int inventoryId, int customerId, Timestamp returnDate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "StaffService",
+      "description": "You are summarizing a Java class for documentation.\nClass: StaffService\nDependencies: Staff, StaffRepository\nMethod signatures:\npublic List getAllStaff()\npublic Staff getStaffByUsername(String username)\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [
+        "Staff",
+        "StaffRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllStaff",
+          "signature": "public List getAllStaff()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getStaffByUsername",
+          "signature": "public Staff getStaffByUsername(String username)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "MockTests",
+      "description": "You are summarizing a Java class for documentation.\nClass: MockTests\nDependencies: ActorController, ActorRepository, ActorService, CategoryController, CategoryRepository, CategoryService, CustomerRepository, CustomerService, FilmController, FilmRepository, FilmService, InventoryRepository, InventoryService, RentalRepository, RentalService, StaffRepository\nMethod signatures:\npublic void init()\npublic void testActorById()\npublic void testActorByFirstName()\npublic void testActorByLastName()\npublic ",
+      "dependencies": [
+        "ActorController",
+        "ActorRepository",
+        "ActorService",
+        "CategoryController",
+        "CategoryRepository",
+        "CategoryService",
+        "CustomerRepository",
+        "CustomerService",
+        "FilmController",
+        "FilmRepository",
+        "FilmService",
+        "InventoryRepository",
+        "InventoryService",
+        "RentalRepository",
+        "RentalService",
+        "StaffRepository"
+      ],
+      "methods": [
+        {
+          "name": "init",
+          "signature": "public void init()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorById",
+          "signature": "public void testActorById()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorByFirstName",
+          "signature": "public void testActorByFirstName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorByLastName",
+          "signature": "public void testActorByLastName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorByMore",
+          "signature": "public void testActorByMore()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorByFullName",
+          "signature": "public void testActorByFullName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByID",
+          "signature": "public void testFilmByID()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByDescritption",
+          "signature": "public void testFilmByDescritption()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByRating",
+          "signature": "public void testFilmByRating()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByLength",
+          "signature": "public void testFilmByLength()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByName",
+          "signature": "public void testFilmByName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByDescription",
+          "signature": "public void testFilmByDescription()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilms",
+          "signature": "public void testFilms()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategoryById",
+          "signature": "public void testCategoryById()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategoryByName",
+          "signature": "public void testCategoryByName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCustomerById",
+          "signature": "public void testCustomerById()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCustomer",
+          "signature": "public void testCustomer()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testStaff",
+          "signature": "public void testStaff()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmController",
+          "signature": "public void testFilmController()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmController2",
+          "signature": "public void testFilmController2()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategory",
+          "signature": "public void testCategory()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategory2",
+          "signature": "public void testCategory2()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorController1",
+          "signature": "public void testActorController1()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCustomerController",
+          "signature": "public void testCustomerController()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCustomerController2",
+          "signature": "public void testCustomerController2()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testInventory",
+          "signature": "public void testInventory()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testRental",
+          "signature": "public void testRental()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategoryByTimeStamp",
+          "signature": "public void testCategoryByTimeStamp()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "SakilaProjectApplicationTests",
+      "description": "You are summarizing a Java class for documentation.\nClass: SakilaProjectApplicationTests\nDependencies: None\nMethod signatures:\npublic void MainController1()\npublic void MainController2()\npublic void MainController3()\nWrite a concise 1-2 sentence description of the class purpose.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "MainController1",
+          "signature": "public void MainController1()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "MainController2",
+          "signature": "public void MainController2()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "MainController3",
+          "signature": "public void MainController3()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    }
+  ]
+}
