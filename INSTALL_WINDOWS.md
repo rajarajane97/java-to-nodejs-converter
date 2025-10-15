@@ -34,4 +34,5 @@ python scripts\run_tests.py --suite unit
    - pip install -r requirements.txt
 4. Copy .env.example to .env, set GOOGLE_API_KEY (or other keys)
 5. Help:
-   - python -m ai2node.cli --help
+   - python -m ai2node.main --help
+
