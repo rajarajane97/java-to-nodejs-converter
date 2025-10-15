@@ -66,7 +66,7 @@ class LLMConfig:
     Provider can be "local" (no network, echo fallback), "openai", or
     "anthropic". Token budgets are configurable to manage costs and latency.
     """
-    provider: str = "local"  # local|openai|anthropic
+    provider: str = "local"  # local|openai|anthropic|google
     model: str = "gpt-4o-mini"
     max_input_tokens: int = 12000
     max_output_tokens: int = 1500
@@ -198,5 +198,3 @@ def load_config(config_path: Optional[Union[str, Path]] = None, override_llm: Op
     logging_cfg = LoggingConfig(**dict(data.get("logging", {})))  # type: ignore[arg-type]
 
     return AppConfig(reader=reader_cfg, llm=llm_cfg, logging=logging_cfg)
-
-
