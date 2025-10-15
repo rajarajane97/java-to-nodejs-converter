@@ -1,0 +1,207 @@
+[
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\SakilaProjectApplication.java",
+    "sizeBytes": 357,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\controller\\ActorController.java",
+    "sizeBytes": 2522,
+    "category": "Controller"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\controller\\CategoryController.java",
+    "sizeBytes": 1503,
+    "category": "Controller"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\controller\\CustomerController.java",
+    "sizeBytes": 4622,
+    "category": "Controller"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\controller\\FilmController.java",
+    "sizeBytes": 5386,
+    "category": "Controller"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\controller\\MainController.java",
+    "sizeBytes": 502,
+    "category": "Controller"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\controller\\StaffController.java",
+    "sizeBytes": 1621,
+    "category": "Controller"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\Actor.java",
+    "sizeBytes": 1660,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\Category.java",
+    "sizeBytes": 1362,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\Customer.java",
+    "sizeBytes": 2637,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\Film.java",
+    "sizeBytes": 4032,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\FilmActor.java",
+    "sizeBytes": 1393,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\FilmActorPK.java",
+    "sizeBytes": 1019,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\FilmCategory.java",
+    "sizeBytes": 1429,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\FilmCategoryPK.java",
+    "sizeBytes": 1057,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\FilmText.java",
+    "sizeBytes": 1319,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\Inventory.java",
+    "sizeBytes": 1285,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\Order.java",
+    "sizeBytes": 749,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\Rental.java",
+    "sizeBytes": 2567,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\entities\\Staff.java",
+    "sizeBytes": 3219,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\respositories\\ActorRepository.java",
+    "sizeBytes": 639,
+    "category": "Repository"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\respositories\\CategoryRepository.java",
+    "sizeBytes": 346,
+    "category": "Repository"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\respositories\\CustomerRepository.java",
+    "sizeBytes": 1497,
+    "category": "Repository"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\respositories\\FilmRepository.java",
+    "sizeBytes": 1505,
+    "category": "Repository"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\respositories\\InventoryRepository.java",
+    "sizeBytes": 1062,
+    "category": "Repository"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\respositories\\RentalRepository.java",
+    "sizeBytes": 620,
+    "category": "Repository"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\respositories\\StaffRepository.java",
+    "sizeBytes": 597,
+    "category": "Repository"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\securingweb\\FailureHandler.java",
+    "sizeBytes": 747,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\securingweb\\MvcConfig.java",
+    "sizeBytes": 700,
+    "category": "Config"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\securingweb\\SuccessHandler.java",
+    "sizeBytes": 1861,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\securingweb\\UserDetailsServiceImpl.java",
+    "sizeBytes": 1898,
+    "category": "Service"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\securingweb\\WebSecurityConfig.java",
+    "sizeBytes": 3126,
+    "category": "Config"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\services\\ActorService.java",
+    "sizeBytes": 1280,
+    "category": "Service"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\services\\CategoryService.java",
+    "sizeBytes": 721,
+    "category": "Service"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\services\\CustomerService.java",
+    "sizeBytes": 1489,
+    "category": "Service"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\services\\FilmService.java",
+    "sizeBytes": 1459,
+    "category": "Service"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\services\\InventoryService.java",
+    "sizeBytes": 1050,
+    "category": "Service"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\services\\RentalService.java",
+    "sizeBytes": 1188,
+    "category": "Service"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\main\\java\\com\\sparta\\engineering72\\sakilaproject\\services\\StaffService.java",
+    "sizeBytes": 682,
+    "category": "Service"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\test\\java\\com\\sparta\\engineering72\\sakilaproject\\MockTests.java",
+    "sizeBytes": 15083,
+    "category": "Unknown"
+  },
+  {
+    "path": "C:\\Users\\AryRan\\Rajarajan\\AI-Learning\\Assignment\\Test_Prj\\SakilaProject-master\\src\\test\\java\\com\\sparta\\engineering72\\sakilaproject\\SakilaProjectApplicationTests.java",
+    "sizeBytes": 865,
+    "category": "Unknown"
+  }
+]

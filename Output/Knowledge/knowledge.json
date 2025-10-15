@@ -1,0 +1,2225 @@
+{
+  "projectOverview": "This Java project appears to be a Spring Boot application named SakilaProjectApplication, which manages a database of films, actors, categories, customers, staff, and rentals. It includes controllers for handling HTTP requests related to these entities, repositories for data access, and custom handlers for authentication success and failure.",
+  "modules": [
+    {
+      "name": "SakilaProjectApplication",
+      "description": "The `SakilaProjectApplication` class serves as the entry point for running a Spring Boot application, which likely includes functionality related to the Sakila database schema and associated business logic.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "main",
+          "signature": "public void main(String args)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "ActorController",
+      "description": "The `ActorController` class is responsible for handling HTTP requests related to actors and their film details, utilizing services such as `ActorService` and `FilmService` to manage actor data and retrieve film information. It provides methods to fetch actors based on name filters, get detailed film information for a specific actor, find an actor by ID, and retrieve the full name of an actor using its ID.",
+      "dependencies": [
+        "Actor",
+        "ActorService",
+        "FilmService"
+      ],
+      "methods": [
+        {
+          "name": "getActors",
+          "signature": "public String getActors(ModelMap modelMap, String firstNameFilter, String lastNameFilter)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "getActorFilmDetails",
+          "signature": "public String getActorFilmDetails(ModelMap modelMap, Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findActorById",
+          "signature": "public Actor findActorById(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorFullNameFromID",
+          "signature": "public String getActorFullNameFromID(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CategoryController",
+      "description": "The `CategoryController` class is responsible for handling HTTP requests related to categories and films, utilizing services such as `CategoryService` and `FilmService` to manage category data and film details respectively. It provides methods to retrieve all categories, get details of a specific category by its ID, and fetch a category object by its ID.",
+      "dependencies": [
+        "Category",
+        "CategoryService",
+        "FilmService"
+      ],
+      "methods": [
+        {
+          "name": "getCategories",
+          "signature": "public String getCategories(ModelMap modelMap)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCategoryDetails",
+          "signature": "public String getCategoryDetails(ModelMap modelMap, Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCategoryById",
+          "signature": "public Category getCategoryById(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CustomerController",
+      "description": "The `CustomerController` class is responsible for handling customer-related operations such as displaying the current user, listing customers based on filters, and showing rental history for a specific customer. It utilizes services like `CustomerService`, `FilmService`, `InventoryService`, and `RentalService` to manage data and business logic.",
+      "dependencies": [
+        "CustomerService",
+        "FilmService",
+        "InventoryService",
+        "RentalService"
+      ],
+      "methods": [
+        {
+          "name": "currentUser",
+          "signature": "public String currentUser(ModelMap modelMap, HttpServletRequest request)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 3
+        },
+        {
+          "name": "getCustomers",
+          "signature": "public String getCustomers(ModelMap modelMap, String firstNameFilter, String lastNameFilter)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "showUsersRentalHistory",
+          "signature": "public String showUsersRentalHistory(ModelMap modelMap, int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 3
+        }
+      ]
+    },
+    {
+      "name": "FilmController",
+      "description": "The `FilmController` class is responsible for handling film-related operations such as retrieving films and their details, renting films, editing product pages, and deleting products, by interacting with various services like `CustomerService`, `FilmService`, `InventoryService`, and `RentalService`.",
+      "dependencies": [
+        "CustomerService",
+        "Film",
+        "FilmService",
+        "InventoryService",
+        "RentalService"
+      ],
+      "methods": [
+        {
+          "name": "getFilms",
+          "signature": "public String getFilms(ModelMap modelMap, String filter)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 2
+        },
+        {
+          "name": "getFilmDetails",
+          "signature": "public String getFilmDetails(ModelMap modelMap, Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "rentFilm",
+          "signature": "public String rentFilm(ModelMap modelMap, Principal principal, int filmid)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 3
+        },
+        {
+          "name": "getFilmDetails",
+          "signature": "public String getFilmDetails(ModelMap modelMap, String filter)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 3
+        },
+        {
+          "name": "showEditProductPage",
+          "signature": "public ModelAndView showEditProductPage(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "deleteProduct",
+          "signature": "public String deleteProduct(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findFilmByID",
+          "signature": "public Film findFilmByID(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "MainController",
+      "description": "The `MainController` class is responsible for handling user interactions related to the home page, login page, and account management pages in a web application.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "home",
+          "signature": "public String home()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "login",
+          "signature": "public String login()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "account",
+          "signature": "public String account()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "StaffController",
+      "description": "The `StaffController` class is responsible for handling requests related to staff operations, utilizing services such as `CustomerService`, `InventoryService`, and `StaffService` to manage customer interactions, inventory management, and staff-related tasks respectively. It includes a method `currentUser` that retrieves the current user information and adds it to the model map for use in views.",
+      "dependencies": [
+        "CustomerService",
+        "InventoryService",
+        "StaffService"
+      ],
+      "methods": [
+        {
+          "name": "currentUser",
+          "signature": "public String currentUser(ModelMap modelMap, HttpServletRequest request)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Actor",
+      "description": "The `Actor` class represents an actor with properties such as actor ID, first name, last name, and last update timestamp, providing methods to get and set these values, as well as overriding `equals` and `hashCode` for object comparison.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public int getActorId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 7
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "description": "The `Category` class represents a category with properties for its ID, name, and last update timestamp, providing methods to get and set these values, as well as standard `equals` and `hashCode` implementations.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(int categoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getName",
+          "signature": "public String getName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setName",
+          "signature": "public void setName(String name)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 6
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Customer",
+      "description": "The `Customer` class represents a customer entity with properties such as customer ID, first name, last name, email, active status, creation date, and last update timestamp. It provides methods to get and set these properties, as well as standard Java methods for equality comparison and hash code generation.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getCustomerId",
+          "signature": "public int getCustomerId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCustomerId",
+          "signature": "public void setCustomerId(int customerId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getEmail",
+          "signature": "public String getEmail()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setEmail",
+          "signature": "public void setEmail(String email)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActive",
+          "signature": "public byte getActive()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActive",
+          "signature": "public void setActive(byte active)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCreateDate",
+          "signature": "public Timestamp getCreateDate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCreateDate",
+          "signature": "public void setCreateDate(Timestamp createDate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 10
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Film",
+      "description": "The `Film` class represents a movie with properties such as its ID, title, description, release year, rental details, and other attributes like rating and special features. It provides methods to get and set these properties.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getTitle",
+          "signature": "public String getTitle()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setTitle",
+          "signature": "public void setTitle(String title)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getDescription",
+          "signature": "public String getDescription()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setDescription",
+          "signature": "public void setDescription(String description)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getReleaseYear",
+          "signature": "public int getReleaseYear()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setReleaseYear",
+          "signature": "public void setReleaseYear(int releaseYear)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRentalDuration",
+          "signature": "public Integer getRentalDuration()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRentalDuration",
+          "signature": "public void setRentalDuration(Integer rentalDuration)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRentalRate",
+          "signature": "public BigDecimal getRentalRate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRentalRate",
+          "signature": "public void setRentalRate(BigDecimal rentalRate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLength",
+          "signature": "public Integer getLength()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLength",
+          "signature": "public void setLength(Integer length)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getReplacementCost",
+          "signature": "public BigDecimal getReplacementCost()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setReplacementCost",
+          "signature": "public void setReplacementCost(BigDecimal replacementCost)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRating",
+          "signature": "public String getRating()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRating",
+          "signature": "public void setRating(String rating)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getSpecialFeatures",
+          "signature": "public String getSpecialFeatures()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setSpecialFeatures",
+          "signature": "public void setSpecialFeatures(String specialFeatures)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "High",
+          "complexityScore": 14
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmActor",
+      "description": "The `FilmActor` class represents the relationship between actors and films, storing details such as actor ID, film ID, and the timestamp of the last update to this relationship. It includes methods for getting and setting these properties, as well as standard Java methods like `equals` and `hashCode`.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public int getActorId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 6
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmActorPK",
+      "description": "The `FilmActorPK` class serves as a primary key for associating actors with films, containing methods to get and set the actor ID and film ID, as well as overriding `equals` and `hashCode` for proper object comparison and hashing.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public Integer getActorId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmCategory",
+      "description": "The `FilmCategory` class represents the relationship between films and categories, storing details such as film ID, category ID, and the timestamp of the last update. It includes methods to get and set these properties, as well as standard Java methods for equality comparison and hash code generation.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(Integer filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(Integer categoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 6
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmCategoryPK",
+      "description": "The `FilmCategoryPK` class serves as a primary key for associating films with categories in a database, providing methods to get and set the film ID and category ID, as well as overriding `equals` and `hashCode` for proper object comparison and hashing.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(int categoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmText",
+      "description": "The `FilmText` class is a simple data transfer object (DTO) used to encapsulate information about a film, including its ID, title, and description. It provides basic getter and setter methods for these properties, as well as implementations of `equals` and `hashCode` for comparison and hashing purposes.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getTitle",
+          "signature": "public String getTitle()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setTitle",
+          "signature": "public void setTitle(String title)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getDescription",
+          "signature": "public String getDescription()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setDescription",
+          "signature": "public void setDescription(String description)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 6
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Inventory",
+      "description": "The `Inventory` class represents an inventory item in a film rental system, containing properties for the inventory ID, film ID, and last update timestamp, along with standard methods for equality comparison and hash code generation.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getInventoryId",
+          "signature": "public int getInventoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setInventoryId",
+          "signature": "public void setInventoryId(int inventoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "description": "The `Order` class represents an order in a system, containing references to a `Customer`, a `Film`, and a `Rental`. It provides methods to get and set these dependencies, encapsulating the relationship between an order and its associated customer, film, and rental details.",
+      "dependencies": [
+        "Customer",
+        "Film",
+        "Rental"
+      ],
+      "methods": [
+        {
+          "name": "getCustomer",
+          "signature": "public Customer getCustomer()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCustomer",
+          "signature": "public void setCustomer(Customer customer)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilm",
+          "signature": "public Film getFilm()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFilm",
+          "signature": "public void setFilm(Film film)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRental",
+          "signature": "public Rental getRental()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRental",
+          "signature": "public void setRental(Rental rental)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Rental",
+      "description": "The `Rental` class represents a rental transaction in a video store system, containing details such as the rental ID, date, inventory item ID, customer ID, return date, staff ID, and last update timestamp. It includes methods to get and set these properties, as well as standard `equals` and `hashCode` implementations for object comparison and hashing.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getRentalId",
+          "signature": "public int getRentalId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRentalId",
+          "signature": "public void setRentalId(int rentalId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRentalDate",
+          "signature": "public Timestamp getRentalDate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setRentalDate",
+          "signature": "public void setRentalDate(Timestamp rentalDate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getInventoryId",
+          "signature": "public int getInventoryId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setInventoryId",
+          "signature": "public void setInventoryId(int inventoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerId",
+          "signature": "public int getCustomerId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setCustomerId",
+          "signature": "public void setCustomerId(int customerId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getReturnDate",
+          "signature": "public Timestamp getReturnDate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setReturnDate",
+          "signature": "public void setReturnDate(Timestamp returnDate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getStaffId",
+          "signature": "public int getStaffId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setStaffId",
+          "signature": "public void setStaffId(int staffId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "Medium",
+          "complexityScore": 10
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "Staff",
+      "description": "The `Staff` class represents an employee with attributes such as ID, name, picture, email, activity status, username, password, and last update timestamp. It provides methods to get and set these properties, as well as standard Java methods for equality comparison and hash code generation.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "getStaffId",
+          "signature": "public int getStaffId()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setStaffId",
+          "signature": "public void setStaffId(int staffId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getPicture",
+          "signature": "public byte getPicture()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setPicture",
+          "signature": "public void setPicture(byte picture)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getEmail",
+          "signature": "public String getEmail()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setEmail",
+          "signature": "public void setEmail(String email)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActive",
+          "signature": "public byte getActive()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setActive",
+          "signature": "public void setActive(byte active)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getUsername",
+          "signature": "public String getUsername()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setUsername",
+          "signature": "public void setUsername(String username)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getPassword",
+          "signature": "public String getPassword()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setPassword",
+          "signature": "public void setPassword(String password)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "",
+          "complexity": "High",
+          "complexityScore": 12
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "ActorRepository",
+      "description": "The `ActorRepository` class is responsible for managing data access operations related to actors, providing methods to retrieve actors by their first and last names, as well as by actor ID.",
+      "dependencies": [
+        "Actor"
+      ],
+      "methods": [
+        {
+          "name": "findActorsByFirstNameAndLastName",
+          "signature": "public List findActorsByFirstNameAndLastName(String firstName, String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findActorsByFirstName",
+          "signature": "public List findActorsByFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findActorsByLastName",
+          "signature": "public List findActorsByLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorByActorId",
+          "signature": "public Actor getActorByActorId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CategoryRepository",
+      "description": "The `CategoryRepository` class is responsible for managing and retrieving category data, providing a method to fetch a category by its unique identifier (`id`).",
+      "dependencies": [
+        "Category"
+      ],
+      "methods": [
+        {
+          "name": "getCategoryByCategoryId",
+          "signature": "public Category getCategoryByCategoryId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CustomerRepository",
+      "description": "The `CustomerRepository` class is responsible for managing and retrieving customer data from a database, providing methods to fetch customers by various criteria such as credentials, username, name components, ID, and email, as well as counting the total number of customers.",
+      "dependencies": [
+        "Customer"
+      ],
+      "methods": [
+        {
+          "name": "getCustomerByCredentials",
+          "signature": "public Customer getCustomerByCredentials(String username, Integer password)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByUsername",
+          "signature": "public Customer getCustomerByUsername(String username)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByFirstName",
+          "signature": "public List getCustomersByFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByLastName",
+          "signature": "public List getCustomersByLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByFullName",
+          "signature": "public List getCustomersByFullName(String firstName, String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByCustomerId",
+          "signature": "public Customer getCustomerByCustomerId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByEmail",
+          "signature": "public Customer getCustomerByEmail(String email)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerCount",
+          "signature": "public Integer getCustomerCount()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmRepository",
+      "description": "The `FilmRepository` class is responsible for managing and retrieving film data, including counting available films, fetching available or all films by category or actor, searching by title, and retrieving a film by its ID.",
+      "dependencies": [
+        "Film"
+      ],
+      "methods": [
+        {
+          "name": "getAvailableFilmCount",
+          "signature": "public Integer getAvailableFilmCount(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAvailableFilms",
+          "signature": "public List getAvailableFilms()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAllFilmsByCategory",
+          "signature": "public List getAllFilmsByCategory(Integer categoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAllFilmsByActor",
+          "signature": "public List getAllFilmsByActor(Integer actorId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "findByTitle",
+          "signature": "public List findByTitle(String title)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmByFilmId",
+          "signature": "public Film getFilmByFilmId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "InventoryRepository",
+      "description": "The `InventoryRepository` class is responsible for managing inventory data, providing methods to retrieve an inventory by its ID, delete an inventory by its ID, and count the total number of inventories in the system.",
+      "dependencies": [
+        "Inventory"
+      ],
+      "methods": [
+        {
+          "name": "getInventoriesByInventoryId",
+          "signature": "public Inventory getInventoriesByInventoryId(Integer inventoryId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "deleteInventoryByInventoryId",
+          "signature": "public void deleteInventoryByInventoryId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getInventoryCount",
+          "signature": "public Integer getInventoryCount()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "RentalRepository",
+      "description": "The `RentalRepository` class is responsible for managing and retrieving rental records, providing methods to fetch a single rental by its ID and all rentals associated with a specific customer ID.",
+      "dependencies": [
+        "Rental"
+      ],
+      "methods": [
+        {
+          "name": "getRentalByRentalId",
+          "signature": "public Rental getRentalByRentalId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getRentalByCustomerId",
+          "signature": "public List getRentalByCustomerId(Integer customerId)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "StaffRepository",
+      "description": "The `StaffRepository` class is responsible for managing and retrieving staff information, specifically providing access to a staff member's details based on their username.",
+      "dependencies": [
+        "Staff"
+      ],
+      "methods": [
+        {
+          "name": "getStaffByUsername",
+          "signature": "public Staff getStaffByUsername(String username)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FailureHandler",
+      "description": "The `FailureHandler` class is responsible for handling access denied exceptions by processing an HTTP request and response to manage unauthorized access scenarios appropriately.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "handle",
+          "signature": "public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "MvcConfig",
+      "description": "The `MvcConfig` class is a configuration class in a Spring MVC application that configures view controllers using the `addViewControllers` method, which registers handlers for specific URL patterns to directly render views without involving a controller.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "addViewControllers",
+          "signature": "public void addViewControllers(ViewControllerRegistry registry)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "SuccessHandler",
+      "description": "The `SuccessHandler` class is responsible for handling successful authentication requests by processing the `HttpServletRequest`, `HttpServletResponse`, and `Authentication` objects to manage the post-authentication logic.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "onAuthenticationSuccess",
+          "signature": "public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 5
+        }
+      ]
+    },
+    {
+      "name": "UserDetailsServiceImpl",
+      "description": "The `UserDetailsServiceImpl` class is responsible for loading user details by username using repositories for customers and staff, implementing the `UserDetailsService` interface to provide authentication information.",
+      "dependencies": [
+        "CustomerRepository",
+        "StaffRepository"
+      ],
+      "methods": [
+        {
+          "name": "loadUserByUsername",
+          "signature": "public UserDetails loadUserByUsername(String anyUsername)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 4
+        }
+      ]
+    },
+    {
+      "name": "WebSecurityConfig",
+      "description": "The `WebSecurityConfig` class configures security settings for web applications, including HTTP security configurations, user details service, password encoder, and authentication provider, to ensure secure access control and authentication mechanisms.",
+      "dependencies": [
+        "CustomerService",
+        "StaffService",
+        "SuccessHandler"
+      ],
+      "methods": [
+        {
+          "name": "configure",
+          "signature": "public void configure(HttpSecurity http)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "userDetailsService",
+          "signature": "public UserDetailsService userDetailsService()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "passwordEncoder",
+          "signature": "public PasswordEncoder passwordEncoder()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "authenticationProvider",
+          "signature": "public DaoAuthenticationProvider authenticationProvider()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "configure",
+          "signature": "public void configure(AuthenticationManagerBuilder auth)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "ActorService",
+      "description": "The `ActorService` class provides methods to manage and retrieve information about actors, utilizing an `ActorRepository` for data persistence and operations.",
+      "dependencies": [
+        "Actor",
+        "ActorRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllActors",
+          "signature": "public List getAllActors()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorByID",
+          "signature": "public Actor getActorByID(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorsByFullName",
+          "signature": "public List getActorsByFullName(String firstName, String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorsByFirstName",
+          "signature": "public List getActorsByFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorsByLastName",
+          "signature": "public List getActorsByLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getActorFullNameFromID",
+          "signature": "public String getActorFullNameFromID(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CategoryService",
+      "description": "The `CategoryService` class provides methods to retrieve all categories and a specific category by its ID using a repository dependency.",
+      "dependencies": [
+        "Category",
+        "CategoryRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllCategories",
+          "signature": "public List getAllCategories()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getByCategoryId",
+          "signature": "public Category getByCategoryId(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "CustomerService",
+      "description": "The `CustomerService` class provides methods to manage and retrieve customer data, including operations like fetching all customers, retrieving by name or ID, saving new customers, and counting total customers. It interacts with a `CustomerRepository` for data persistence.",
+      "dependencies": [
+        "Customer",
+        "CustomerRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllCustomers",
+          "signature": "public List getAllCustomers()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByFirstName",
+          "signature": "public List getCustomersByFirstName(String firstName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByLastName",
+          "signature": "public List getCustomersByLastName(String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomersByFullName",
+          "signature": "public List getCustomersByFullName(String firstName, String lastName)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByID",
+          "signature": "public Customer getCustomerByID(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerByEmail",
+          "signature": "public Customer getCustomerByEmail(String email)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "save",
+          "signature": "public void save(Customer customer)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getCustomerCount",
+          "signature": "public Integer getCustomerCount()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "FilmService",
+      "description": "The `FilmService` class provides methods to manage films, including retrieving all films, fetching films by ID or title, checking availability, and saving or deleting films. It interacts with a `FilmRepository` for data persistence.",
+      "dependencies": [
+        "Film",
+        "FilmRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllFilms",
+          "signature": "public List getAllFilms()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmByID",
+          "signature": "public Film getFilmByID(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmsByTitle",
+          "signature": "public List getFilmsByTitle(String title)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAvailableFilms",
+          "signature": "public List getAvailableFilms()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getAvailableFilmCount",
+          "signature": "public Integer getAvailableFilmCount(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmsByCategory",
+          "signature": "public List getFilmsByCategory(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getFilmsByActor",
+          "signature": "public List getFilmsByActor(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "save",
+          "signature": "public void save(Film film)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "deleteFilmById",
+          "signature": "public void deleteFilmById(int id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "InventoryService",
+      "description": "The `InventoryService` class manages inventory operations, providing methods to retrieve all inventory items, fetch an item by its ID, remove an item by ID, and count the total number of inventory items.",
+      "dependencies": [
+        "Inventory",
+        "InventoryRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllInventory",
+          "signature": "public List getAllInventory()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getInventoriesById",
+          "signature": "public Inventory getInventoriesById(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "deleteInventoryItemById",
+          "signature": "public void deleteInventoryItemById(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getInventoryCount",
+          "signature": "public Integer getInventoryCount()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "RentalService",
+      "description": "The `RentalService` class manages rental operations by interacting with a `RentalRepository`, providing methods to retrieve rentals for a specific customer and to add new rentals.",
+      "dependencies": [
+        "RentalRepository"
+      ],
+      "methods": [
+        {
+          "name": "getRentalsByCustomer",
+          "signature": "public List getRentalsByCustomer(Integer id)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "addRental",
+          "signature": "public void addRental(int inventoryId, int customerId, Timestamp returnDate)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "StaffService",
+      "description": "The `StaffService` class provides methods to retrieve all staff members and find a specific staff member by their username, utilizing a `StaffRepository` for data access.",
+      "dependencies": [
+        "Staff",
+        "StaffRepository"
+      ],
+      "methods": [
+        {
+          "name": "getAllStaff",
+          "signature": "public List getAllStaff()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "getStaffByUsername",
+          "signature": "public Staff getStaffByUsername(String username)",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "MockTests",
+      "description": "The `MockTests` class is designed to provide unit tests for various controllers and services related to actors, films, categories, customers, and staff within a rental system, ensuring their functionality through methods that simulate different test scenarios.",
+      "dependencies": [
+        "ActorController",
+        "ActorRepository",
+        "ActorService",
+        "CategoryController",
+        "CategoryRepository",
+        "CategoryService",
+        "CustomerRepository",
+        "CustomerService",
+        "FilmController",
+        "FilmRepository",
+        "FilmService",
+        "InventoryRepository",
+        "InventoryService",
+        "RentalRepository",
+        "RentalService",
+        "StaffRepository"
+      ],
+      "methods": [
+        {
+          "name": "init",
+          "signature": "public void init()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorById",
+          "signature": "public void testActorById()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorByFirstName",
+          "signature": "public void testActorByFirstName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorByLastName",
+          "signature": "public void testActorByLastName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorByMore",
+          "signature": "public void testActorByMore()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorByFullName",
+          "signature": "public void testActorByFullName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByID",
+          "signature": "public void testFilmByID()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByDescritption",
+          "signature": "public void testFilmByDescritption()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByRating",
+          "signature": "public void testFilmByRating()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByLength",
+          "signature": "public void testFilmByLength()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByName",
+          "signature": "public void testFilmByName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmByDescription",
+          "signature": "public void testFilmByDescription()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilms",
+          "signature": "public void testFilms()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategoryById",
+          "signature": "public void testCategoryById()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategoryByName",
+          "signature": "public void testCategoryByName()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCustomerById",
+          "signature": "public void testCustomerById()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCustomer",
+          "signature": "public void testCustomer()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testStaff",
+          "signature": "public void testStaff()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmController",
+          "signature": "public void testFilmController()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testFilmController2",
+          "signature": "public void testFilmController2()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategory",
+          "signature": "public void testCategory()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategory2",
+          "signature": "public void testCategory2()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testActorController1",
+          "signature": "public void testActorController1()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCustomerController",
+          "signature": "public void testCustomerController()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCustomerController2",
+          "signature": "public void testCustomerController2()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testInventory",
+          "signature": "public void testInventory()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testRental",
+          "signature": "public void testRental()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "testCategoryByTimeStamp",
+          "signature": "public void testCategoryByTimeStamp()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    },
+    {
+      "name": "SakilaProjectApplicationTests",
+      "description": "The `SakilaProjectApplicationTests` class contains test methods for various controllers within a Java application, specifically designed to validate the functionality of `MainController1`, `MainController2`, and `MainController3`.",
+      "dependencies": [],
+      "methods": [
+        {
+          "name": "MainController1",
+          "signature": "public void MainController1()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "MainController2",
+          "signature": "public void MainController2()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        },
+        {
+          "name": "MainController3",
+          "signature": "public void MainController3()",
+          "description": "",
+          "complexity": "Low",
+          "complexityScore": 1
+        }
+      ]
+    }
+  ]
+}
