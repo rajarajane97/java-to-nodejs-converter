@@ -3,8 +3,9 @@ from __future__ import annotations
 """LLM provider abstraction.
 
 This layer decouples the application from specific LLM SDKs. It enables:
-- Local echo provider for offline/dev runs
-- Cloud providers (OpenAI/Anthropic) when keys are supplied
+- Local echo provider for offline/dev runs - This will be selected if no provider is configured or is set to none 
+- Locally running LLMs via OpenAI-compatible API (e.g., LM Studio, Ollama)
+- Cloud providers (Gemini/OpenAI/Anthropic) when keys are supplied
 - Centralized token accounting for reporting and cost control
 """
 
@@ -55,6 +56,60 @@ class LocalEchoProvider(LLMProvider):
             resp.output_tokens,
         )
         return resp
+
+
+class LocalRunLLMProvider(LLMProvider):
+    def __init__(self, cfg: LLMConfig) -> None:
+        super().__init__(cfg)
+        self.api_endpoint = os.getenv("LOCAL_LLM_API_ENDPOINT", "http://localhost:1234")
+        self.model_name = os.getenv("LOCAL_LLM_MODEL_NAME", "qwen2.5-coder-7b-instruct")
+        self.api_key = os.getenv("LOCAL_LLM_API_KEY","lm-studio")
+        try:
+            import openai  # type: ignore
+        except Exception as exc:  # pragma: no cover - environment dependent
+            raise RuntimeError("openai python library not installed, required for LocalRunLLMProvider") from exc
+        
+        openai.api_key = self.api_key
+
+        try:
+            from openai import OpenAI  # type: ignore
+            self._client = OpenAI(api_key=self.api_key, base_url=self.api_endpoint)
+        except Exception:
+            # Fall back to using the openai module directly
+            self._client = openai
+
+    def complete(self, prompt: str) -> LLMResponse:
+        """Call the locally running LLM via the OpenAI Python client.
+        """
+        if not getattr(self, "_client", None):
+            raise RuntimeError("OpenAI client is not initialized for LocalRunLLMProvider")
+
+        model = self.model_name or self.cfg.model
+        resp = self._client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=self.cfg.temperature,
+            max_tokens=self.cfg.max_output_tokens,
+        )
+
+        if not resp or not getattr(resp, 'choices', None) or len(resp.choices) == 0:
+            self._logger.error("LLM(local-run) call failed: received empty or malformed response for model=%s endpoint=%s", model, self.api_endpoint)
+            # Return a failure response
+            return LLMResponse(text="", input_tokens=len(prompt), output_tokens=0)
+        text = resp.choices[0].message.content or ""
+        usage = getattr(resp, "usage", None)
+        in_tokens = getattr(usage, "prompt_tokens", len(prompt)) if usage else len(prompt)
+        out_tokens = getattr(usage, "completion_tokens", len(text)) if usage else len(text)
+        self.total_input_tokens += in_tokens
+        self.total_output_tokens += out_tokens
+        self._logger.info(
+            "LLM(local-run) call: endpoint=%s model=%s prompt_tokens=%s completion_tokens=%s",
+            self.api_endpoint,
+            model,
+            in_tokens,
+            out_tokens,
+        )
+        return LLMResponse(text=text, input_tokens=in_tokens, output_tokens=out_tokens)
 
 
 class OpenAIProvider(LLMProvider):
@@ -119,17 +174,52 @@ class AnthropicProvider(LLMProvider):
             out_tokens,
         )
         return LLMResponse(text=text, input_tokens=in_tokens, output_tokens=out_tokens)
+    
+class GeminiProvider(LLMProvider):
+    def __init__(self, cfg: LLMConfig) -> None:
+        super().__init__(cfg)
+        try:
+            #from google.generativeai import generativeai as gemini  # type: ignore
+            import google.generativeai as gemini
+        except Exception as exc:  # pragma: no cover
+            raise RuntimeError("google-generativeai not installed") from exc
+        gemini.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+        self._model = gemini.GenerativeModel(self.cfg.model)
 
+    def complete(self, prompt: str) -> LLMResponse:  # pragma: no cover - requires network
+        """Call Gemini text generation with conservative defaults."""
+        resp = self._model.generate_content(
+            prompt,
+            generation_config={
+                "temperature": self.cfg.temperature,
+                "max_output_tokens": self.cfg.max_output_tokens,
+            }
+        )
+        text = resp.text if hasattr(resp, "text") else str(resp)
+        # Gemini API does not provide token usage directly; fallback to lengths
+        in_tokens = len(prompt)
+        out_tokens = len(text)
+        self.total_input_tokens += in_tokens
+        self.total_output_tokens += out_tokens
+        self._logger.info(
+            "LLM(gemini) call: model=%s prompt_tokens=%s completion_tokens=%s",
+            self.cfg.model,
+            in_tokens,
+            out_tokens,
+        )
+        return LLMResponse(text=text, input_tokens=in_tokens, output_tokens=out_tokens)
 
 def build_provider(cfg: LLMConfig) -> LLMProvider:
     """Factory for LLMProvider instances from configuration."""
     provider = cfg.provider.lower()
     if provider == "local":
-        return LocalEchoProvider(cfg)
+        return LocalRunLLMProvider(cfg)
     if provider == "openai":
         return OpenAIProvider(cfg)
     if provider == "anthropic":
         return AnthropicProvider(cfg)
+    if provider == "gemini":
+        return GeminiProvider(cfg)
     return LocalEchoProvider(cfg)
 
 
