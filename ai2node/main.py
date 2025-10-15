@@ -3,14 +3,10 @@ Main CLI entrypoint for Java2NodeAI.
 
 This module orchestrates the high-level pipeline:
 - Read and categorize Java files
-- Extract structured knowledge (syntax-driven; optionally LLM-enriched later)
+- Extract structured knowledge (syntax-driven and LLM-enriched)
 - Convert sample Controller/Service/DAO into Node.js (Express) scaffolds
 - Generate TXT/HTML reports including performance and token usage metrics
 
-Design goals:
-- Keep orchestration straightforward and transparent
-- Defer policy/configuration to `utils.config`
-- Keep side effects (file IO) explicit and localized
 """
 import argparse
 import json
@@ -25,7 +21,9 @@ from ai2node.reader.java_reader import JavaCodebaseReader, JavaFileInfo
 from ai2node.extractor.pipeline import extract_metadata, save_knowledge
 from ai2node.converter.convert import convert_to_express
 from ai2node.reporting.generator import generate_reports, TokenUsage
+from dotenv import load_dotenv
 
+load_dotenv()  # Load environment variables from .env file if present
 
 def _resolve_path(path_str: str) -> Path:
     """Resolve a user-supplied path safely.
@@ -67,7 +65,7 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
         "--llm-provider",
         type=str,
         default=None,
-        choices=["local", "openai", "anthropic"],
+        choices=["local", "openai", "anthropic", "gemini"],
         help="Override configured LLM provider.",
     )
     parser.add_argument(
@@ -141,7 +139,9 @@ def main(argv: Optional[List[str]] = None) -> int:
         from ai2node.llm.provider import build_provider as _build
         provider = _build(config.llm)
     except Exception:
+        logger.warning("LLM provider setup failed; proceeding without LLM support")
         provider = None
+    logger.info("Using LLM provider: %s", str(provider))
     knowledge = extract_metadata(java_files, config=config, provider=provider)
     knowledge_out = knowledge_dir / "knowledge.json"
     save_knowledge(knowledge, knowledge_out)
